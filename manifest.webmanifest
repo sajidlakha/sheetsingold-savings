@@ -1,0 +1,77 @@
+{
+ "id": "./",
+ "name": "Savings Challenge by SheetsInGold",
+ "short_name": "Savings",
+ "description": "Savings challenges (52-week, 100 envelopes, penny, no-spend), savings goals, sinking funds and an emergency fund. Works offline. Your data stays on your device.",
+ "start_url": "./?source=app",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#0E1624",
+ "theme_color": "#0E1624",
+ "categories": [
+  "finance",
+  "productivity"
+ ],
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Add a saving",
+   "short_name": "Add",
+   "url": "./?go=add",
+   "icons": [
+    {
+     "src": "icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Challenges",
+   "short_name": "Challenges",
+   "url": "./?view=challenges",
+   "icons": [
+    {
+     "src": "icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Savings goals",
+   "short_name": "Goals",
+   "url": "./?view=goals",
+   "icons": [
+    {
+     "src": "icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}

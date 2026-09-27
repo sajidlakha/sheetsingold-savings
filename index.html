@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Savings Challenge · SheetsInGold</title>
+<meta name="theme-color" content="#0F1826">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Savings">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Savings Challenge">
+<meta name="description" content="SheetsInGold Savings Challenge: 52-week, 100 envelope, penny and no-spend challenges, savings goals and sinking funds. Offline, no account.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<style>
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/Montserrat-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/PlayfairDisplay-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/PlayfairDisplay-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/PlayfairDisplay-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/PlayfairDisplay-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root{--onacc:#1B2A41;--bg:#0E1624;--bg2:#131E30;--card:#172438;--card2:#1D2C44;--line:#2A3A55;--text:#EDE6D6;--muted:#98A3B5;--gold:#D6B563;--gold2:#B8913F;--goldbg:rgba(214,181,99,.13);
+ --green:#6FBF8E;--greenbg:rgba(111,191,142,.14);--red:#E58A74;--redbg:rgba(229,138,116,.14);--blue:#7FA7D9;--shadow:0 10px 30px rgba(0,0,0,.35);--r:18px}
+[data-theme=rose]{--onacc:#fff;--bg:#FBF3F1;--bg2:#F6E7E3;--card:#FFFFFF;--card2:#FDF7F5;--line:#EFD9D3;--text:#4A1F2C;--muted:#8A6F74;--gold:#B86B5A;--gold2:#9C5646;--goldbg:rgba(184,107,90,.12);
+ --green:#3F7F5E;--greenbg:#E2F0E7;--red:#B8434A;--redbg:#F8DEDF;--blue:#6A5A9E;--shadow:0 10px 28px rgba(74,31,44,.08)}
+[data-theme=sage]{--onacc:#fff;--bg:#F1F4EE;--bg2:#E5EBE1;--card:#FFFFFF;--card2:#F7F9F4;--line:#D9E3D4;--text:#1F3A33;--muted:#687A71;--gold:#4E8B6E;--gold2:#3D7359;--goldbg:rgba(78,139,110,.12);
+ --green:#2F7D55;--greenbg:#E1F0E6;--red:#B5523B;--redbg:#F6E0D8;--blue:#3D6E8C;--shadow:0 10px 28px rgba(31,58,51,.08)}
+[data-theme=lavender]{--onacc:#fff;--bg:#F5F2FB;--bg2:#ECE6F8;--card:#FFFFFF;--card2:#FAF8FE;--line:#E3DCF2;--text:#2E2750;--muted:#77719A;--gold:#7C63C9;--gold2:#6550AE;--goldbg:rgba(124,99,201,.12);
+ --green:#3B8C69;--greenbg:#E1F2EA;--red:#C24E67;--redbg:#F9E0E6;--blue:#4F7CC9;--shadow:0 10px 28px rgba(46,39,80,.09)}
+[data-theme=ocean]{--onacc:#07262B;--bg:#08171C;--bg2:#0C2128;--card:#102C35;--card2:#153641;--line:#224A56;--text:#E2F1F1;--muted:#8DB0B4;--gold:#5CC6BE;--gold2:#3FA9A1;--goldbg:rgba(92,198,190,.13);
+ --green:#7DD3A1;--greenbg:rgba(125,211,161,.14);--red:#F29078;--redbg:rgba(242,144,120,.14);--blue:#8FB8F0;--shadow:0 10px 30px rgba(0,0,0,.38)}
+[data-theme=ivory]{--onacc:#fff;--bg:#F6F1E6;--bg2:#EFE7D6;--card:#FFFFFF;--card2:#FBF7EF;--line:#E6DCC6;--text:#1B2A41;--muted:#6E7482;--gold:#B8913F;--gold2:#9C7A31;--goldbg:rgba(184,145,63,.12);
+ --green:#2F7D55;--greenbg:#E3F1E8;--red:#B5523B;--redbg:#F8E2DA;--blue:#2E5E9E;--shadow:0 10px 28px rgba(27,42,65,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:15px;-webkit-font-smoothing:antialiased}
+body{min-height:100vh}
+button,input,select,textarea{font:inherit;color:inherit}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.app{display:flex;min-height:100vh}
+/* sidebar */
+.side{width:232px;flex:0 0 232px;background:var(--bg2);border-right:1px solid var(--line);padding:22px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:4px}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 18px}
+.brand .lg{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2A3F60,#0E1624);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;color:var(--gold);font-weight:700;font-size:20px}
+.brand b{display:block;font-size:14px;letter-spacing:.3px}.brand small{color:var(--muted);font-size:11.5px}
+.nav{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;cursor:pointer;color:var(--muted);font-weight:600;font-size:14px;border:0;background:none;text-align:left;width:100%}
+.nav:hover{background:var(--card)}.nav.on{background:var(--goldbg);color:var(--gold)}
+.nav .ic{width:22px;text-align:center;font-size:16px}
+.side .grow{flex:1}
+.side .log{margin-top:8px;background:var(--gold);color:var(--onacc);border:0;border-radius:12px;padding:11px;font-weight:800;cursor:pointer}
+/* main */
+.main{flex:1;min-width:0;padding:26px 30px 110px;max-width:1180px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.top h1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:30px;line-height:1.1}
+.top .sub{color:var(--muted);font-size:13px;margin-top:4px}
+.chipbar{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 14px;font-weight:700;font-size:13px;cursor:pointer;color:var(--text)}
+.btn:hover{border-color:var(--gold)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--onacc)}
+.btn.ghost{background:none}
+.btn.sm{padding:6px 10px;font-size:12px;border-radius:10px}
+.btn.red{color:var(--red)}
+.grid{display:grid;gap:18px}.grid>*,.inl>*{min-width:0}html,body{overflow-x:hidden}
+.g2{grid-template-columns:1.25fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.card h3{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card h3 .btn{letter-spacing:0;text-transform:none}
+.hero{background:linear-gradient(145deg,var(--card2),var(--card));position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--goldbg),transparent 70%)}
+.label{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;font-weight:800;color:var(--gold)}
+.big{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:64px;line-height:1.05;margin:6px 0 4px;letter-spacing:-.5px}
+.big .cur{font-size:.5em;vertical-align:.65em;margin-right:3px;color:var(--muted)}
+.big.neg{color:var(--red)}
+.muted{color:var(--muted)}.small{font-size:12.5px}.tiny{font-size:11.5px}
+.gold-t{color:var(--gold)}.green-t{color:var(--green)}.red-t{color:var(--red)}
+.link{color:var(--gold);cursor:pointer;font-weight:700;background:none;border:0;padding:0;font-size:13px}
+.bar{height:9px;border-radius:9px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;border-radius:9px;background:var(--gold)}
+.bar.green i{background:var(--green)}.bar.red i{background:var(--red)}
+.row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .grow{flex:1;min-width:0}.row .nm{font-weight:700;font-size:14px}.row .meta{color:var(--muted);font-size:12px;margin-top:2px}
+.amt{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:.3px}
+.pill.gold{background:var(--goldbg);color:var(--gold)}.pill.green{background:var(--greenbg);color:var(--green)}.pill.red{background:var(--redbg);color:var(--red)}.pill.grey{background:var(--line);color:var(--muted)}
+.tick{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);background:none;cursor:pointer;flex:0 0 26px;display:flex;align-items:center;justify-content:center;font-weight:900;color:transparent}
+.tick.on{background:var(--green);border-color:var(--green);color:#fff}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.qa{border:1px solid var(--line);background:var(--card2);border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
+.qa:hover,.qa.on{border-color:var(--gold);color:var(--gold)}
+.inp{width:100%;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:11px 13px;outline:none}
+.inp:focus{border-color:var(--gold)}
+.lbl{font-size:12px;font-weight:700;color:var(--muted);margin:12px 0 6px;display:block}
+.inl{display:flex;gap:10px}.inl>*{flex:1}
+.envs{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.env{border:1px solid var(--line);border-radius:20px;padding:6px 11px;font-size:12px;font-weight:700;cursor:pointer;background:none}
+.env.on{background:var(--gold);color:var(--onacc);border-color:var(--gold)}
+.next{display:flex;gap:14px;align-items:center;background:var(--goldbg);border:1px solid var(--gold);border-radius:16px;padding:14px 16px}
+.next .n{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--onacc);display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 34px}
+.kpi .v{font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;margin-top:4px}
+.kpi .k{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--muted)}
+/* forecast */
+.fc{display:flex;gap:6px;align-items:flex-end;height:120px;padding-top:6px}
+.fc .d{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-width:0;height:100%}
+.fc .cw{flex:1;width:100%;display:flex;align-items:flex-end}
+.fc .col{width:100%;border-radius:6px 6px 3px 3px;background:var(--goldbg);border:1px solid var(--gold);position:relative}
+.fc .col.bill{background:var(--redbg);border-color:var(--red)}
+.fc .col.pay{background:var(--greenbg);border-color:var(--green)}
+.fc .dl{font-size:10px;color:var(--muted);font-weight:700}
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal .h{font-size:11px;font-weight:800;color:var(--muted);text-align:center;letter-spacing:1px;padding:4px 0}
+.cal .c{min-height:92px;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:7px;cursor:pointer;display:flex;flex-direction:column;gap:3px;overflow:hidden}
+.cal .c.out{opacity:.35}.cal .c.today{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.cal .c .dn{font-weight:800;font-size:13px}
+.cal .c.pay{background:linear-gradient(180deg,var(--goldbg),var(--card2))}
+.cal .ev{font-size:10.5px;font-weight:700;border-radius:6px;padding:2px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev.p{background:var(--gold);color:var(--onacc)}.ev.b{background:var(--redbg);color:var(--red)}.ev.b.paid{background:var(--greenbg);color:var(--green)}.ev.s{color:var(--muted);background:none;padding:0 5px}
+/* ring */
+.ring{--p:0;width:74px;height:74px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p)*1%),var(--line) 0);display:flex;align-items:center;justify-content:center;flex:0 0 74px}
+.ring span{width:58px;height:58px;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+/* modal */
+.mask{position:fixed;inset:0;background:rgba(5,10,18,.62);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.mask.on{display:flex}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:22px;width:min(520px,100%);max-height:92vh;overflow:auto;padding:24px;box-shadow:var(--shadow)}
+.modal h2{font-family:'Playfair Display',Georgia,serif;font-size:24px;margin-bottom:4px}
+.modal .acts{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:11px 18px;border-radius:14px;font-weight:700;font-size:13px;z-index:60;opacity:0;transition:.25s;pointer-events:none;display:flex;gap:12px;align-items:center}
+.toast.on{opacity:1;pointer-events:auto}.toast button{background:none;border:0;color:var(--gold2);font-weight:800;cursor:pointer}
+/* mobile nav */
+.bnav{display:none}
+.steps{display:flex;gap:6px;margin:10px 0 4px}.steps i{flex:1;height:5px;border-radius:5px;background:var(--line)}.steps i.on{background:var(--gold)}
+.empty{padding:26px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:14px}
+.focus .hide-focus{display:none!important}
+.expl{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:12px;font-size:13px}
+.expl div{display:flex;justify-content:space-between;padding:3px 0}
+.expl .t{border-top:1px solid var(--line);margin-top:6px;padding-top:8px;font-weight:800}
+.star{color:var(--gold)}
+@media (max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}.g4.keep{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+ .side{display:none}.main{padding:18px 14px 110px}
+ .big{font-size:54px}.top h1{font-size:25px}
+ .bnav{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--bg2);border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom));z-index:40;justify-content:space-around}
+ .bnav button{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:700;color:var(--muted);cursor:pointer;flex:1}
+ .bnav button .ic{font-size:19px}.bnav button.on{color:var(--gold)}
+ .bnav .plus{background:var(--gold);color:var(--onacc);border-radius:50%;width:50px;height:50px;flex:0 0 50px;margin-top:-22px;box-shadow:var(--shadow);font-size:26px;font-weight:800;justify-content:center}
+ .row{flex-wrap:wrap;row-gap:6px}.row .grow{flex:1 1 55%}.row .btn.sm{padding:6px 9px}
+ .install{flex-wrap:wrap;gap:10px 12px}.install .grow{flex:1 1 170px}.install img{width:44px;height:44px;flex-basis:44px}
+ .top .chipbar{gap:6px}.top .chipbar .btn{padding:8px 11px;font-size:12px}
+ .cal{gap:4px}.cal .c{min-height:58px;padding:4px;border-radius:9px}.cal .h{font-size:9.5px;letter-spacing:0}.card{padding:16px}.g4.keep{gap:12px}.kpi .v{font-size:23px}.cal .ev{font-size:0;height:6px;padding:0}.cal .ev.s{display:none}
+}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px;margin-top:8px}
+.sw{border:2px solid var(--line);border-radius:16px;padding:10px;cursor:pointer;background:var(--card2);text-align:left}
+.sw.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--goldbg)}
+.sw .pv{height:54px;border-radius:10px;display:flex;align-items:flex-end;gap:5px;padding:8px;margin-bottom:8px}
+.sw .pv i{display:block;width:18px;border-radius:5px}
+.sw b{font-size:13px;display:block}.sw small{font-size:11px;color:var(--muted)}
+.hbar{display:flex;align-items:flex-end;gap:8px;height:130px}.hbar .d{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:5px;min-width:0}
+.hbar .cw{flex:1;width:100%;display:flex;align-items:flex-end;justify-content:center;gap:3px}.hbar .col{width:100%;max-width:34px;border-radius:7px 7px 3px 3px;background:var(--gold)}
+.hbar .col.b{background:var(--line)}.hbar .dl{font-size:10.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+.pp{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;font-size:13.5px}
+.pp .bar{grid-column:1/3;margin-bottom:6px;height:7px}
+.chk{display:flex;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.chk:last-child{border-bottom:0}.chk .tick{pointer-events:none}
+.tpl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.win{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.win:last-child{border:0}
+.win .ic{width:32px;height:32px;border-radius:50%;background:var(--goldbg);color:var(--gold);display:flex;align-items:center;justify-content:center;flex:0 0 32px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:70}
+.verdict{border-radius:14px;padding:14px 16px;margin-top:14px;font-size:14px;line-height:1.5}
+.verdict.y{background:var(--greenbg);color:var(--green)}.verdict.m{background:var(--goldbg);color:var(--gold2)}.verdict.n{background:var(--redbg);color:var(--red)}
+.verdict b{color:inherit}
+@media print{.side,.bnav,.chipbar,.btn{display:none!important}.main{padding:0}.card{box-shadow:none;break-inside:avoid}}
+.ico{width:18px;height:18px;flex:0 0 18px;display:inline-block;vertical-align:-3px}
+.nav .ic{display:flex;align-items:center;justify-content:center}.nav .ic .ico{width:19px;height:19px}
+.bnav .ic .ico{width:21px;height:21px}
+.cat{width:36px;height:36px;border-radius:11px;background:var(--goldbg);color:var(--gold);display:flex;align-items:center;justify-content:center;flex:0 0 36px}
+.cat.red{background:var(--redbg);color:var(--red)}.cat.green{background:var(--greenbg);color:var(--green)}
+.avatar{width:42px;height:42px;border-radius:50%;flex:0 0 42px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;background-size:cover;background-position:center;border:2px solid var(--gold)}
+.avatar.lg{width:88px;height:88px;flex:0 0 88px;font-size:32px}
+.chart{width:100%;display:block}.chart text{font-family:Montserrat,Arial,sans-serif;fill:var(--muted);font-size:10.5px;font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:12px}.legend span{display:flex;align-items:center;gap:6px}.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.donutwrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.donutwrap svg{flex:0 0 150px}
+.tip{display:flex;gap:12px;align-items:flex-start;background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:12px;font-size:13px;line-height:1.45}
+.seg{display:flex;gap:6px;flex-wrap:wrap}.seg button{border:1px solid var(--line);background:var(--card2);border-radius:10px;padding:8px 12px;font-weight:700;font-size:12.5px;cursor:pointer}
+.seg button.on{background:var(--gold);color:var(--onacc);border-color:var(--gold)}
+.illus{display:flex;flex-direction:column;align-items:center;gap:10px}.illus svg{width:74px;height:74px;color:var(--gold);opacity:.85}
+body.priv .amt,body.priv .big,body.priv .kpi .v,body.priv .pp b,body.priv .expl b,body.priv .ev.p,body.priv .verdict b{filter:blur(7px)}
+body.priv .amt:hover{filter:none}
+.install{display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,var(--goldbg),transparent);border:1px solid var(--gold);border-radius:18px;padding:14px 16px;margin-bottom:18px}
+.install img{width:52px;height:52px;border-radius:13px;flex:0 0 52px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.ios-steps{counter-reset:st;margin-top:10px}.ios-steps div{position:relative;padding:12px 0 12px 42px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5}
+.ios-steps div:before{counter-increment:st;content:counter(st);position:absolute;left:0;top:10px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--onacc);font-weight:800;display:flex;align-items:center;justify-content:center}
+.ios-steps svg{width:20px;height:20px;vertical-align:-4px;color:var(--blue);display:inline-block}
+.side .inst{margin-top:8px;background:none;border:1px solid var(--gold);color:var(--gold);border-radius:12px;padding:10px;font-weight:800;cursor:pointer;display:flex;gap:8px;align-items:center;justify-content:center}
+html[data-size=lg]{font-size:16.5px}html[data-size=xl]{font-size:18px}
+html[data-size=lg] .big{font-size:70px}html[data-size=xl] .big{font-size:76px}
+html[data-size=lg] .tiny,html[data-size=lg] .small,html[data-size=lg] .meta{font-size:13.5px}html[data-size=xl] .tiny,html[data-size=xl] .small,html[data-size=xl] .meta{font-size:15px}
+html[data-contrast=high]{--muted:var(--text);--line:var(--gold)}html[data-contrast=high] .card{border-width:2px}html[data-contrast=high] .btn{border-width:2px}
+.faq details{border-bottom:1px solid var(--line);padding:12px 0}.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary:after{content:'+';color:var(--gold);font-weight:800}.faq details[open] summary:after{content:'–'}.faq details div{margin-top:8px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.tour-mask{position:fixed;inset:0;z-index:80;pointer-events:auto}
+.tour-spot{position:fixed;border-radius:16px;box-shadow:0 0 0 9999px rgba(5,10,18,.72);border:2px solid var(--gold);transition:all .25s;pointer-events:none;z-index:81}
+.tour-tip{position:fixed;z-index:82;background:var(--card);border:1px solid var(--gold);border-radius:16px;padding:16px 18px;width:min(340px,calc(100vw - 32px));box-shadow:var(--shadow)}
+.tour-tip h4{font-family:'Playfair Display',Georgia,serif;font-size:19px;margin-bottom:6px}.tour-tip p{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.tour-tip .acts{margin-top:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}.tbl td,.tbl th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+.tbl th{color:var(--muted);font-weight:700}.tbl tr.dup td{opacity:.45;text-decoration:line-through}
+
+/* ---------- savings challenge ---------- */
+.lgimg{width:40px;height:40px;border-radius:11px;flex:0 0 40px}
+.weeks{display:flex;gap:6px}.wk{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+.wk i{width:100%;max-width:40px;aspect-ratio:1;border-radius:11px;border:1.5px dashed var(--line);display:flex;align-items:center;justify-content:center}
+.wk.on i{background:var(--gold);border-color:var(--gold);color:var(--onacc)}.wk i .ico{width:16px;height:16px}.wk span{font-size:10.5px;color:var(--muted);font-weight:700}
+.catch{display:flex;gap:12px;align-items:center;background:var(--goldbg);border:1px dashed var(--gold);border-radius:14px;padding:12px 14px;margin-top:12px}
+.catch .grow{flex:1;min-width:0}
+.chcard{cursor:pointer;transition:border-color .15s}.chcard:hover{border-color:var(--gold)}
+.chcard .grow{flex:1;min-width:0}
+.minigrid{display:flex;flex-wrap:wrap;gap:3px;margin-top:14px;align-items:center}
+.minigrid i{width:11px;height:11px;border-radius:3px;background:var(--line)}.minigrid i.d{background:var(--gold)}.minigrid i.m{background:none;border:1.5px dashed var(--red)}
+.lib{display:flex;flex-direction:column;gap:6px}.lib b{font-size:16px;margin-top:6px}
+.cat.big2{width:48px;height:48px;border-radius:14px;flex:0 0 48px}.cat.big2 .ico{width:25px;height:25px}
+.boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
+.boxes.dense{grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:5px}
+.bx{border:1.5px solid var(--line);background:var(--card2);border-radius:12px;padding:8px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:60px;transition:transform .12s;color:var(--text)}
+.boxes.dense .bx{min-height:40px;padding:4px 2px;border-radius:9px}
+.bx .bn{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;line-height:1}
+.boxes.dense .bx .bn{font-size:12.5px;font-family:Montserrat,Arial,sans-serif;font-weight:800}
+.bx .ba{font-size:11px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.bx.d{background:var(--gold);border-color:var(--gold);color:var(--onacc)}.bx.d .ba{color:var(--onacc);opacity:.85}
+.bx.n{border:2px solid var(--gold);box-shadow:0 0 0 3px var(--goldbg)}.bx.m{border:2px dashed var(--red)}
+.bx:hover{transform:translateY(-2px)}.bx.pulse{animation:pop .5s}
+@keyframes pop{0%{transform:scale(.8)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+.drawbox{text-align:center;padding:6px 0}
+.envbig{margin:18px auto;width:240px;height:156px;border-radius:14px;background:var(--gold);color:var(--onacc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;position:relative;box-shadow:var(--shadow);animation:pop .6s;overflow:hidden}
+.envbig:before{content:"";position:absolute;left:0;right:0;top:0;height:64px;background:linear-gradient(to bottom right,transparent 49%,rgba(0,0,0,.13) 50%) left top/50% 100% no-repeat,linear-gradient(to bottom left,transparent 49%,rgba(0,0,0,.13) 50%) right top/50% 100% no-repeat}
+.envbig span{font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;position:relative;margin-top:26px}
+.envbig b{font-family:'Playfair Display',Georgia,serif;font-size:48px;position:relative;line-height:1}
+.sug{padding:14px;margin-top:10px;box-shadow:none}.sug.best{border:2px solid var(--gold)}.sug .grow{flex:1;min-width:0}
+.pickrow{width:100%;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer;color:inherit;font:inherit;text-align:left}
+.pickrow:hover .nm{color:var(--gold)}
+.ob{width:min(560px,100%)}.ob h2{font-size:28px;margin:12px 0 4px}
+.row .grow .bar{margin-top:7px;height:6px}
+.install .cat{flex:0 0 36px}
+body.priv .bx .ba,body.priv .envbig b{filter:blur(6px)}
+@media (max-width:760px){ .weeks{gap:4px}.wk span{font-size:9.5px}.boxes{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}.bx{min-height:54px}.bx .bn{font-size:16px}.boxes.dense{grid-template-columns:repeat(auto-fill,minmax(36px,1fr));gap:4px}.boxes.dense .bx{min-height:34px}.hbar{height:100px} }
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<div class="mask" id="mask"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+<script>
+/* ============================================================
+   SheetsInGold Savings Challenge  ·  original work by SheetsInGold
+   Everything is stored on this device (localStorage). No account.
+   ============================================================ */
+const KEY = 'sig_savings_v1', LOCK = 'sig_savings_lock_v1', APPNAME = 'Savings Challenge';
+const CURS = ['$','£','€','¥','₹','₨','kr','zł','R','A$','C$','CHF','₱'];
+
+/* ---------- dates (local, YYYY-MM-DD) ---------- */
+const pad = n => String(n).padStart(2,'0');
+const ds = d => d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const pd = s => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d, 12); };
+const addD = (s,n) => { const d = pd(s); d.setDate(d.getDate()+n); return ds(d); };
+const addM = (s,n) => { const d = pd(s), day = d.getDate(); d.setDate(1); d.setMonth(d.getMonth()+n); d.setDate(Math.min(day, new Date(d.getFullYear(), d.getMonth()+1, 0).getDate())); return ds(d); };
+const diff = (a,b) => Math.round((pd(a)-pd(b))/864e5);
+const TODAY = () => ds(new Date());
+const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const nice = s => { const d = pd(s); return DOW[d.getDay()]+' '+d.getDate()+' '+MON[d.getMonth()]; };
+const short = s => { const d = pd(s); return d.getDate()+' '+MON[d.getMonth()]; };
+const longD = s => { const d = pd(s); return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); };
+const monthsLeft = (to, from = TODAY()) => Math.max(1, Math.ceil(diff(to, from) / 30.44));
+const uid = () => Math.random().toString(36).slice(2,9);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const isDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s || '');
+const r2 = n => Math.round(n * 100) / 100;
+
+/* ---------- lock + encryption (PBKDF2 + AES-GCM) ---------- */
+let lockInfo = (() => { try { const o = JSON.parse(localStorage.getItem(LOCK)); if (o && o.locked && o.salt) return o; } catch(e){} return {locked:false}; })();
+const saveLock = () => { try { localStorage.setItem(LOCK, JSON.stringify(lockInfo)); } catch(e){} };
+let cryptoKey = null;
+const b64 = buf => { const a = new Uint8Array(buf); let s = ''; for (let i = 0; i < a.length; i += 0x8000) s += String.fromCharCode.apply(null, a.subarray(i, i + 0x8000)); return btoa(s); };
+const unb64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const newSalt = () => b64(crypto.getRandomValues(new Uint8Array(16)));
+async function deriveKey(pin, salt){
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(String(pin)), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2', salt:unb64(salt), iterations:210000, hash:'SHA-256'}, base, {name:'AES-GCM', length:256}, false, ['encrypt','decrypt']);
+}
+async function encryptText(text, key, salt){ const iv = crypto.getRandomValues(new Uint8Array(12)); const ct = await crypto.subtle.encrypt({name:'AES-GCM', iv}, key, new TextEncoder().encode(text)); return JSON.stringify({enc:1, kind:'sig-savings', salt, iv:b64(iv), ct:b64(ct)}); }
+async function decryptText(blob, key){ const o = typeof blob === 'string' ? JSON.parse(blob) : blob; const pt = await crypto.subtle.decrypt({name:'AES-GCM', iv:unb64(o.iv)}, key, unb64(o.ct)); return new TextDecoder().decode(pt); }
+const isEncrypted = raw => { try { const o = JSON.parse(raw); return !!(o && o.enc === 1 && o.ct); } catch(e){ return false; } };
+
+/* ---------- state ---------- */
+function blank(){
+  return {v:1, kind:'sig-savings', name:'', cur:'$', theme:'midnight', start:TODAY(), setupDone:false, example:false,
+    challenges:[], goals:[], funds:[], deposits:[], wins:[], miles:[],
+    emergency:{costs:[], months:6, goalId:''},
+    profile:{size:'md', contrast:false, privacy:false, calm:false}, lastOpen:TODAY()};
+}
+function clean(d){
+  const o = Object.assign(blank(), d && typeof d === 'object' ? d : {});
+  ['challenges','goals','funds','deposits','wins','miles'].forEach(k => { if (!Array.isArray(o[k])) o[k] = []; });
+  o.profile = Object.assign(blank().profile, o.profile && typeof o.profile === 'object' ? o.profile : {});
+  if (!['md','lg','xl'].includes(o.profile.size)) o.profile.size = 'md';
+  if (!CURS.includes(o.cur)) o.cur = '$';
+  if (!THEMES.some(t => t[0] === o.theme)) o.theme = 'midnight';
+  if (!isDate(o.start)) o.start = TODAY();
+  o.name = String(o.name || '').slice(0, 40);
+  o.challenges = o.challenges.filter(c => c && TYPES[c.type]).map(c => {
+    c.id = String(c.id || uid()); c.name = String(c.name || TYPES[c.type].name).slice(0, 60);
+    if (!isDate(c.start)) c.start = TODAY(); c.base = Math.max(0, +c.base || 0); c.count = Math.max(1, Math.min(400, Math.round(+c.count || TYPES[c.type].n)));
+    if (!['up','down','same'].includes(c.style)) c.style = 'up'; c.every = [0,1,7,14,30].includes(+c.every) ? +c.every : 7; c.moved = Math.max(0, +c.moved || 0);
+    const t = {}; if (c.ticks && typeof c.ticks === 'object') Object.keys(c.ticks).forEach(k => { const i = +k; if (i >= 0 && i < 400 && isDate(c.ticks[k])) t[i] = c.ticks[k]; }); c.ticks = t;
+    c.goalId = String(c.goalId || ''); return c; });
+  o.goals = o.goals.filter(g => g && g.id).map(g => Object.assign(g, {name:String(g.name||'Goal').slice(0,60), target:Math.max(0,+g.target||0), saved0:+g.saved0||0, monthly:Math.max(0,+g.monthly||0), date:isDate(g.date)?g.date:''}));
+  o.funds = o.funds.filter(f => f && f.id).map(f => Object.assign(f, {name:String(f.name||'Fund').slice(0,60), cost:Math.max(0,+f.cost||0), saved0:+f.saved0||0, every:[0,1,3,6,12,24].includes(+f.every)?+f.every:12, due:isDate(f.due)?f.due:TODAY()}));
+  o.deposits = o.deposits.filter(x => x && isDate(x.date) && isFinite(+x.amount)).map(x => Object.assign(x, {id:String(x.id||uid()), amount:r2(+x.amount), to:String(x.to||''), note:String(x.note||'').slice(0,80)}));
+  const e = o.emergency && typeof o.emergency === 'object' ? o.emergency : {}; o.emergency = {costs:Array.isArray(e.costs) ? e.costs.filter(c => c && c.id).map(c => ({id:c.id, n:String(c.n||'').slice(0,40), v:Math.max(0,+c.v||0)})) : [], months:[1,3,6,9,12].includes(+e.months) ? +e.months : 6, goalId:String(e.goalId||'')};
+  return o;
+}
+function load(){ try { const raw = localStorage.getItem(KEY); if (!raw || isEncrypted(raw)) return null; const s = JSON.parse(raw); if (s && s.v) return clean(s); } catch(e){} return null; }
+let S = null, saveSeq = 0;
+function save(quiet){
+  if (!S) return; const data = JSON.stringify(S);
+  const fail = () => toast('Could not save on this device. Download a backup in Settings.');
+  if (lockInfo.locked) { if (!cryptoKey) return; const seq = ++saveSeq, key = cryptoKey;
+    encryptText(data, key, lockInfo.salt).then(blob => { if (seq !== saveSeq) return; try { localStorage.setItem(KEY, blob); } catch(e){ fail(); } }); }
+  else { try { localStorage.setItem(KEY, data); } catch(e){ fail(); } }
+  if (!quiet) autoBackupSoon();
+}
+const money = (n, dp) => { const neg = n < 0; n = Math.abs(+n || 0); const whole = Math.abs(n - Math.round(n)) < .005;
+  const f = (dp === 0 || (dp === undefined && (n >= 1000 || whole))) ? Math.round(n).toLocaleString() : n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}); return (neg?'-':'')+S.cur+f; };
+
+/* ---------- challenges ---------- */
+const TYPES = {
+  w52:   {name:'52-Week Challenge', short:'52-week', n:52, every:7, base:1, unit:'Week', icon:'calendar', styles:true,
+          desc:'Save a little more each week. Start with 1 in week one and finish with 52 in the last week.'},
+  p26:   {name:'26-Paycheck Challenge', short:'26-paycheck', n:26, every:14, base:1, unit:'Payday', icon:'wallet', styles:true,
+          desc:'The 52-week idea for people paid every 2 weeks. One deposit each payday.'},
+  env:   {name:'100 Envelope Challenge', short:'Envelopes', n:100, every:0, base:1, unit:'Envelope', icon:'envelope',
+          desc:'Envelopes numbered 1 to 100. Draw one at random and save that amount. Any order, any pace.'},
+  penny: {name:'365-Day Penny Challenge', short:'Penny', n:365, every:1, base:0.01, unit:'Day', icon:'coin', styles:true,
+          desc:'Save 1 cent on day one, 2 cents on day two and so on. Tiny daily steps that add up.'},
+  nospend:{name:'No-Spend Challenge', short:'No-spend', n:30, every:1, base:0, unit:'Day', icon:'leaf', noMoney:true,
+          desc:'Pick a number of days and tick every day you only spend on essentials. No money to move, just a habit.'},
+  custom:{name:'My own challenge', short:'Custom', n:12, every:30, base:50, unit:'Step', icon:'spark', styles:true, custom:true,
+          desc:'Your rules: how many boxes, how often and how much. For example 12 months of 50, or 10 weeks going up by 5.'}
+};
+const EVERY = [[1,'Every day'],[7,'Every week'],[14,'Every 2 weeks'],[30,'Every month'],[0,'Any order, any time']];
+function amountOf(c, i){
+  const b = c.base, n = c.count;
+  switch (c.type) {
+    case 'w52': return r2(c.style === 'down' ? b*(n-i) : c.style === 'same' ? b : b*(i+1));
+    case 'p26': return r2(c.style === 'down' ? b*(4*(n-i)-1) : c.style === 'same' ? b : b*(4*(i+1)-1));
+    case 'env': return r2(b*(i+1));
+    case 'penny': return r2(c.style === 'down' ? b*(n-i) : c.style === 'same' ? b : b*(i+1));
+    case 'nospend': return 0;
+    default: return r2(c.style === 'down' ? b*(n-i) : c.style === 'same' ? b : b*(i+1));
+  }
+}
+const everyOf = c => c.type === 'custom' ? c.every : TYPES[c.type].every;
+function dueOf(c, i){ const e = everyOf(c); if (!e) return null; return e === 30 ? addM(c.start, i) : addD(c.start, i*e); }
+function boxes(c){ const out = []; for (let i = 0; i < c.count; i++) out.push({i, amt:amountOf(c,i), due:dueOf(c,i), done:c.ticks[i] || null}); return out; }
+function stats(c){
+  const B = boxes(c), t = TODAY(); let saved = 0, total = 0, doneN = 0; const missed = [], dueNow = [];
+  B.forEach(b => { total += b.amt; if (b.done) { saved += b.amt; doneN++; } else if (b.due) { if (b.due < weekStart(t)) missed.push(b); else if (b.due <= addD(weekStart(t),6)) dueNow.push(b); } });
+  const next = B.find(b => !b.done && b.due && b.due >= t) || B.find(b => !b.done) || null;
+  const last = B.length && B[B.length-1].due, weeks = last ? Math.max(1, (diff(last, c.start) + everyOf(c)) / 7) : c.count / 7;
+  return {B, saved:r2(saved), total:r2(total), doneN, n:B.length, pct: total ? saved/total : (B.length ? doneN/B.length : 0), missed, dueNow, next, complete: doneN === B.length, perWeek: total/weeks, biggest: Math.max(0, ...B.map(b => b.amt)), end:last};
+}
+const chLabel = (c, b) => c.type === 'nospend' || c.type === 'penny' ? (b.due ? short(b.due) : 'Day '+(b.i+1)) : TYPES[c.type].unit + ' ' + (b.i+1);
+
+/* ---------- goals, funds, totals ---------- */
+const depSum = to => S.deposits.filter(d => d.to === to).reduce((a,d) => a + d.amount, 0);
+const chSaved = c => stats(c).saved;
+function goalSaved(g){ return r2((+g.saved0||0) + depSum('g:'+g.id) + S.challenges.filter(c => c.goalId === g.id).reduce((a,c) => a + chSaved(c), 0)); }
+function goalInfo(g){
+  const saved = goalSaved(g), left = Math.max(0, g.target - saved), t = TODAY();
+  const ml = g.date ? (g.date > t ? monthsLeft(g.date) : 0) : null, need = g.date ? (ml ? left / ml : left) : null;
+  let status = 'grey', text = 'Add a target';
+  if (g.target > 0) { if (saved >= g.target) { status = 'green'; text = '🎉 Reached'; }
+    else if (!g.date) { status = 'grey'; text = 'No date yet'; }
+    else if (!ml) { status = 'red'; text = 'Date passed'; }
+    else if ((+g.monthly||0) >= need - .005) { status = 'green'; text = '✓ On track'; }
+    else { status = 'red'; text = 'Behind: +' + money(need - (+g.monthly||0), 0) + ' a month'; } }
+  return {saved, left, ml, need, status, text, pct: g.target ? Math.min(1, saved/g.target) : 0};
+}
+function fundNext(f){ let d = f.due, t = TODAY(), k = 0; if (f.every) while (d < t && k++ < 400) d = addM(d, f.every); return d; }
+function fundInfo(f){
+  const saved = r2((+f.saved0||0) + depSum('f:'+f.id)), next = fundNext(f), ml = next > TODAY() ? monthsLeft(next) : 0, left = Math.max(0, f.cost - saved);
+  const ready = f.cost > 0 && saved >= f.cost - .005, soon = !ready && diff(next, TODAY()) <= 30;
+  return {saved, next, ml, left, perMonth: left / Math.max(1, ml), ready, soon, pct: f.cost ? Math.min(1, saved/f.cost) : 0};
+}
+function totals(){
+  const ch = S.challenges.reduce((a,c) => a + chSaved(c), 0), dep = S.deposits.reduce((a,d) => a + d.amount, 0);
+  const s0 = S.goals.reduce((a,g) => a + (+g.saved0||0), 0) + S.funds.reduce((a,f) => a + (+f.saved0||0), 0);
+  const notMoved = S.challenges.filter(c => !TYPES[c.type].noMoney).reduce((a,c) => a + Math.max(0, chSaved(c) - (c.moved||0)), 0);
+  return {all:r2(ch + dep + s0), ch:r2(ch), dep:r2(dep), notMoved:r2(notMoved)};
+}
+/* money saved per day from ticks + deposits (for charts and "this month") */
+function flows(){ const m = {};
+  S.challenges.forEach(c => { if (TYPES[c.type].noMoney) return; Object.keys(c.ticks).forEach(i => { const d = c.ticks[i]; m[d] = (m[d]||0) + amountOf(c, +i); }); });
+  S.deposits.forEach(x => { if (x.amount > 0) m[x.date] = (m[x.date]||0) + x.amount; }); return m; }
+function savedBetween(a, b){ const m = flows(); return r2(Object.keys(m).filter(d => d >= a && d <= b).reduce((s,d) => s + m[d], 0)); }
+function weekStart(t = TODAY()){ const d = pd(t), wd = (d.getDay() + 6) % 7; return addD(t, -wd); }
+function monthly12(){ const t = TODAY(), out = []; const y = pd(t).getFullYear(), m = pd(t).getMonth();
+  for (let k = 11; k >= 0; k--) { const a = ds(new Date(y, m-k, 1, 12)), b = ds(new Date(y, m-k+1, 0, 12)); out.push({l:MON[pd(a).getMonth()], v:savedBetween(a, b)}); } return out; }
+function weeksActive(n = 8){ const m = flows(), w = weekStart(); const out = [];
+  for (let k = n-1; k >= 0; k--) { const a = addD(w, -7*k), b = addD(a, 6); out.push({a, on: Object.keys(m).some(d => d >= a && d <= b) || S.challenges.some(c => c.type === 'nospend' && Object.values(c.ticks).some(d => d >= a && d <= b))}); } return out; }
+
+/* ---------- pick for me ---------- */
+const NICE = [0.01,0.02,0.05,0.1,0.25,0.5,1,2,5,10,20,25,50,100];
+const niceBase = x => NICE.reduce((b,v) => Math.abs(v - x) < Math.abs(b - x) ? v : b, NICE[0]);
+function suggest(week){
+  const W = Math.max(1, +week || 0), rows = [];
+  const mk = (type, extra) => { const c = Object.assign({type, style:'up', start:TODAY(), ticks:{}, count:TYPES[type].n, every:TYPES[type].every}, extra); const s = stats(c); return {type, c, total:s.total, perWeek:s.perWeek, biggest:s.biggest, weeks:Math.round(s.n * (everyOf(c)||1) / 7)}; };
+  rows.push(mk('w52', {base: niceBase(W / 26.5)}));
+  rows.push(mk('p26', {base: niceBase(W * 2 / 53)}));
+  rows.push(mk('env', {base: niceBase(W / 353.5), count:100}));   // one envelope a day: 5,050 x base over ~14 weeks
+  rows.push(mk('penny', {base: niceBase(W / 7 / 183)}));
+  rows.forEach(r => { r.fit = Math.abs(Math.log(Math.max(.01, r.perWeek) / W)); });
+  return rows.sort((a,b) => a.fit - b.fit);
+}
+
+/* ---------- icons (own line set) ---------- */
+const IC = {
+  home:'<path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/>',
+  trophy:'<path d="M8 4h8v5a4 4 0 01-8 0z"/><path d="M8 6H5a3 3 0 003 4M16 6h3a3 3 0 01-3 4M12 13v4M8.5 20.5h7M9.5 17h5v3.5h-5z"/>',
+  calendar:'<rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 17h2M11 17h2"/>',
+  wallet:'<path d="M4 7.5h14.5A1.5 1.5 0 0120 9v9.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 18.5z"/><path d="M4 7.5l11-3.5v3.5M16 13.5h1.5"/>',
+  envelope:'<rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/>',
+  coin:'<circle cx="12" cy="12" r="8.5"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.5.8-2.5 1.9 0 2.6 5 1.4 5 4.1 0 1.1-1 2-2.5 2-1.2 0-2.2-.5-2.7-1.3M12 6.5V8M12 16v1.5"/>',
+  leaf:'<path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19l7-7"/>',
+  spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',
+  goals:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/>',
+  repeat:'<path d="M17 2.5l3 3-3 3"/><path d="M4 11.5v-1a5 5 0 015-5h11M7 21.5l-3-3 3-3"/><path d="M20 12.5v1a5 5 0 01-5 5H4"/>',
+  shield:'<path d="M12 2.5l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10v-6z"/>',
+  list:'<path d="M8 6.5h12M8 12h12M8 17.5h12"/><circle cx="4" cy="6.5" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="17.5" r="1"/>',
+  settings:'<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1M18.7 18.7l-2.1-2.1M7.4 7.4L5.3 5.3"/>',
+  help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 015 .9c0 1.8-2.5 2.3-2.5 3.8M12 17.2v.1"/>',
+  more:'<path d="M4 7h16M4 12h16M4 17h16"/>', plus:'<path d="M12 5v14M5 12h14"/>', check:'<path d="M4.5 12.5l5 5 10-11"/>',
+  eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  eyeoff:'<path d="M3 3l18 18M10.5 5.2A11 11 0 0112 5c6.5 0 10 7 10 7a17 17 0 01-3.2 4.2M6.6 6.6C3.7 8.4 2 12 2 12s3.5 7 10 7c1.9 0 3.5-.6 4.9-1.4"/><path d="M9.9 9.9a3 3 0 004.2 4.2"/>',
+  theme:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18z" fill="currentColor"/>',
+  bell:'<path d="M6 16.5V11a6 6 0 0112 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/>',
+  piggy:'<path d="M18.5 10.5c1.2.5 2 1.4 2 2.5v1.5h-1.5l-1 3h-2.5l-.5-1.5h-5l-.5 1.5H7l-1-3c-1.3-1-2-2.3-2-4 0-3.5 3.5-6 8-6 1.4 0 2.8.2 4 .7l2.5-1.2-.5 3z"/><circle cx="15" cy="10" r=".8"/>',
+  dice:'<rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/>',
+  bank:'<path d="M3 9.5L12 4l9 5.5M4.5 10v8M9 10v8M15 10v8M19.5 10v8M3 20.5h18"/>', lock:'<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 018 0v3"/>',
+  upload:'<path d="M12 16V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15v4a1.5 1.5 0 001.5 1.5h13A1.5 1.5 0 0020 19v-4"/>'
+};
+const ico = (n, cls='') => `<svg class="ico ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${IC[n]||IC.spark}</svg>`;
+const illus = (n, text) => `<div class="empty illus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg><div>${text}</div></div>`;
+const SHARE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 11v8a2 2 0 002 2h10a2 2 0 002-2v-8"/></svg>';
+const ADD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
+const ring = (p, label, cls='') => `<div class="ring ${cls}" style="--p:${Math.round(Math.min(1,Math.max(0,p))*100)}"><span>${label ?? Math.round(p*100)+'%'}</span></div>`;
+const bar = (p, cls='') => `<div class="bar ${cls}"><i style="width:${Math.min(100,Math.max(0,p*100)).toFixed(1)}%"></i></div>`;
+
+/* ---------- themes ---------- */
+const THEMES = [
+  ['midnight','Midnight Gold','Deep navy and gold',['#0E1624','#172438','#D6B563']],
+  ['ivory','Ivory Day','Warm cream and gold',['#F6F1E6','#FFFFFF','#B8913F']],
+  ['lavender','Lavender Calm','Soft pastel purple',['#F5F2FB','#FFFFFF','#7C63C9']],
+  ['rose','Rosewood','Blush and terracotta',['#FBF3F1','#FFFFFF','#B86B5A']],
+  ['sage','Sage Garden','Fresh, calm green',['#F1F4EE','#FFFFFF','#4E8B6E']],
+  ['ocean','Ocean Night','Dark teal, easy on eyes',['#08171C','#102C35','#5CC6BE']],
+  ['auto','Auto','Follows your device: Midnight at night, Ivory by day',['#0E1624','#F6F1E6','#D6B563']]];
+function themeNow(){ if (S.theme !== 'auto') return S.theme; return matchMedia('(prefers-color-scheme: dark)').matches ? 'midnight' : 'ivory'; }
+try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if (S && S.theme === 'auto') render(); }); } catch(e){}
+
+/* ---------- render ---------- */
+const NAV = [['home','Home','home'],['challenges','Challenges','trophy'],['goals','Savings goals','goals'],['funds','Sinking funds','repeat'],['emergency','Emergency fund','shield'],['history','All deposits','list'],['settings','Settings','settings'],['help','Help & FAQ','help']];
+let view = 'home', selCh = null, focusBox = null;
+function render(){
+  const th = themeNow(); document.documentElement.dataset.theme = th; document.documentElement.dataset.size = S.profile.size || 'md'; document.documentElement.dataset.contrast = S.profile.contrast ? 'high' : 'normal'; document.body.classList.toggle('priv', !!S.profile.privacy);
+  document.querySelector('meta[name=theme-color]').content = (THEMES.find(t => t[0] === th) || THEMES[0])[3][0];
+  checkWins();
+  const V = {home:vHome, challenges:vChallenges, ch:vChallenge, goals:vGoals, funds:vFunds, emergency:vEmergency, history:vHistory, settings:vSettings, help:vHelp}[view] || vHome;
+  const onMore = ['funds','emergency','history','settings','help'].includes(view);
+  document.getElementById('app').innerHTML = `
+  <aside class="side">
+    <div class="brand"><img src="icon-192.png" alt="" class="lgimg"><div><b>${APPNAME}</b><small>${esc(S.name || 'SheetsInGold')}</small></div></div>
+    ${NAV.map(n => `<button class="nav ${view===n[0]||(view==='ch'&&n[0]==='challenges')?'on':''}" data-go="${n[0]}"><span class="ic">${ico(n[2])}</span>${n[1]}</button>`).join('')}
+    <div class="grow"></div>
+    ${canOfferInstall() ? `<button class="inst" data-act="install">${ico('plus')} Install app</button>` : ''}
+    <button class="log" data-act="addSaving">+ Add a saving</button>
+  </aside>
+  <main class="main">${V()}</main>
+  <nav class="bnav">
+    ${[['home','Home','home'],['challenges','Challenges','trophy']].map(n => `<button class="${view===n[0]||(view==='ch'&&n[0]==='challenges')?'on':''}" data-go="${n[0]}"><span class="ic">${ico(n[2])}</span>${n[1]}</button>`).join('')}
+    <button class="plus" data-act="addSaving" aria-label="Add a saving">+</button>
+    ${[['goals','Goals','goals'],['more','More','more']].map(n => `<button class="${view===n[0]||(n[0]==='more'&&onMore)?'on':''}" data-go="${n[0]}"><span class="ic">${ico(n[2])}</span>${n[1]}</button>`).join('')}
+  </nav>`;
+}
+function head(t, sub, right=''){ return `<div class="top"><div><h1>${t}</h1>${sub?`<div class="sub">${sub}</div>`:''}</div><div class="chipbar">${right}</div></div>`; }
+function greet(){ const h = new Date().getHours(); const g = h >= 5 && h < 12 ? 'Good morning' : h >= 12 && h < 17 ? 'Good afternoon' : h >= 17 && h < 22 ? 'Good evening' : 'Hello'; return g + (S.name ? ', '+esc(S.name.split(' ')[0]) : ''); }
+const eyeBtn = () => `<button class="btn sm" data-act="privacy" title="Hide or show amounts">${ico(S.profile.privacy?'eyeoff':'eye')}</button>`;
+
+/* ---------- home ---------- */
+function vHome(){
+  const t = TODAY(), T = totals(), ms = t.slice(0,8)+'01', thisM = savedBetween(ms, t);
+  const act = S.challenges.filter(c => !stats(c).complete);
+  const due = act.flatMap(c => stats(c).dueNow.map(b => ({c, b}))).sort((a,b) => a.b.due < b.b.due ? -1 : 1);
+  const missed = act.flatMap(c => stats(c).missed.map(b => ({c, b})));
+  const envs = act.filter(c => c.type === 'env' || (c.type === 'custom' && !c.every));
+  const fundsSoon = S.funds.map(f => ({f, i:fundInfo(f)})).sort((a,b) => a.i.next < b.i.next ? -1 : 1).slice(0,3);
+  const weeks = weeksActive(8), wOn = weeks.filter(w => w.on).length;
+  const m12 = monthly12(), mx = Math.max(1, ...m12.map(x => x.v));
+  return `${head(greet(), 'Every little saving counts. Here is where you are.', `${eyeBtn()}<button class="btn sm" data-act="themeModal">${ico('theme')}</button>`)}
+  ${installCard()}${backupCard()}${exampleBanner()}
+  <div class="grid g2" style="margin-bottom:18px">
+    <div class="card hero"><div class="label">Total saved</div><div class="big">${money(T.all)}</div>
+      <div class="small muted">${money(thisM)} saved this month · ${S.challenges.length} challenge${S.challenges.length===1?'':'s'} · ${S.goals.length} goal${S.goals.length===1?'':'s'}</div>
+      <div class="quick" style="margin-top:14px"><button class="btn gold" data-act="addSaving">${ico('plus')} Add a saving</button>${envs.length ? `<button class="btn" data-act="draw" data-id="${envs[0].id}">${ico('dice')} Draw an envelope</button>` : ''}<button class="btn" data-act="newChallenge">${ico('trophy')} New challenge</button></div>
+      ${T.notMoved > 0 ? `<div class="tip">${ico('bank')}<div><b>${money(T.notMoved)}</b> from your challenges is not marked as moved yet. Money left in your everyday account is easy to spend. <button class="link" data-act="movedAll">I moved it to savings</button></div></div>` : ''}
+    </div>
+    <div class="card"><h3>Your last 8 weeks <span class="pill ${wOn>=6?'green':wOn>=3?'gold':'grey'}">${wOn} of 8</span></h3>
+      <div class="weeks">${weeks.map((w,i) => `<div class="wk ${w.on?'on':''}" title="Week of ${short(w.a)}"><i>${w.on?ico('check'):''}</i><span>${i===7?'This':short(w.a).split(' ')[0]}</span></div>`).join('')}</div>
+      <div class="small muted" style="margin-top:10px;line-height:1.5">A gold week means you saved something. No streaks to break: a quiet week is fine, just pick it up again.</div>
+      <h3 style="margin-top:18px">Saved each month</h3>
+      <div class="hbar">${m12.map((x,i) => `<div class="d" title="${money(x.v)}"><div class="cw"><div class="col ${i===11?'':'b'}" style="height:${Math.max(2,x.v/mx*100)}%"></div></div><div class="dl">${x.l}</div></div>`).join('')}</div>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>Due this week ${due.length ? `<span class="pill gold">${due.length}</span>` : ''}</h3>
+      ${due.length ? due.map(({c,b}) => boxRow(c,b)).join('') : illus('check', act.length ? 'Nothing due this week. Nice and easy.' : 'Start a challenge and your saving steps show up here.')}
+      ${missed.length ? `<div class="catch"><div class="grow"><b>${missed.length} to catch up</b><div class="tiny muted">${money(missed.reduce((a,x) => a + x.b.amt, 0))} from earlier weeks. It still counts, whenever you do it.</div></div><button class="btn sm" data-act="catchList">See them</button></div>` : ''}
+    </div>
+    <div class="card"><h3>Your challenges <button class="btn sm" data-go="challenges">All</button></h3>
+      ${S.challenges.length ? S.challenges.slice(0,4).map(c => chMini(c)).join('') : illus('trophy', 'No challenge yet. <button class="link" data-act="newChallenge">Pick one</button> or let us <button class="link" data-act="pickForMe">pick for you</button>.')}
+    </div>
+    <div class="card"><h3>Savings goals <button class="btn sm" data-act="goalModal">+ Add</button></h3>
+      ${S.goals.length ? S.goals.slice(0,4).map(g => goalRow(g, true)).join('') : illus('goals', 'What are you saving for? Add a goal and link a challenge to it.')}
+    </div>
+    <div class="card"><h3>Sinking funds coming up <button class="btn sm" data-go="funds">All</button></h3>
+      ${fundsSoon.length ? fundsSoon.map(({f,i}) => `<div class="row"><div class="cat">${ico('repeat')}</div><div class="grow"><div class="nm">${esc(f.name)}</div><div class="meta">Due ${longD(i.next)} · ${i.ready ? 'ready' : money(i.perMonth,0)+' a month'}</div>${bar(i.pct, i.ready?'green':'')}</div><span class="pill ${i.ready?'green':i.soon?'red':'grey'}">${i.ready?'✓ Ready':i.soon?'Due soon':'Saving'}</span></div>`).join('') : illus('repeat', 'Car insurance, gifts, holidays: save a little each month for costs you know are coming.')}
+    </div>
+  </div>
+  ${S.wins.length ? `<div class="card" style="margin-top:18px"><h3>Your wins</h3>${S.wins.slice(-5).reverse().map(w => `<div class="win"><div class="ic">${ico('trophy')}</div><div class="grow small"><b>${esc(w.t)}</b><div class="tiny muted">${longD(w.d)}</div></div></div>`).join('')}</div>` : ''}`;
+}
+function exampleBanner(){ return S.example ? `<div class="install"><div class="cat">${ico('spark')}</div><div class="grow"><b>You are looking at example numbers</b><div class="tiny muted">Explore everything. When you are ready, start your own (the example is cleared).</div></div><button class="btn gold" data-act="startFresh">Start my own</button></div>` : ''; }
+function boxRow(c, b){ return `<div class="row"><button class="tick ${b.done?'on':''}" data-act="tick" data-id="${c.id}" data-i="${b.i}" aria-label="Mark done">✓</button><div class="grow"><div class="nm">${esc(c.name)} · ${chLabel(c,b)}</div><div class="meta">${b.due ? (b.due === TODAY() ? 'Today' : nice(b.due)) : 'Any time'}</div></div>${TYPES[c.type].noMoney ? '<span class="pill green">No-spend day</span>' : `<div class="amt">${money(b.amt)}</div>`}</div>`; }
+function chMini(c){ const s = stats(c); return `<div class="row" data-act="openCh" data-id="${c.id}" style="cursor:pointer">${ring(s.pct)}<div class="grow"><div class="nm">${esc(c.name)}</div><div class="meta">${TYPES[c.type].noMoney ? `${s.doneN} of ${s.n} days` : `${money(s.saved)} of ${money(s.total)}`} · ${s.complete ? 'complete 🎉' : s.next && s.next.due ? 'next '+short(s.next.due) : s.doneN+' of '+s.n+' filled'}</div></div>${s.missed.length ? `<span class="pill gold">${s.missed.length} to catch up</span>` : ''}</div>`; }
+
+/* ---------- challenges ---------- */
+function vChallenges(){
+  return `${head('Challenges', 'Fun ways to save. Pick one that fits your pay.', `<button class="btn" data-act="pickForMe">${ico('spark')} Pick for me</button><button class="btn gold" data-act="newChallenge">+ New challenge</button>`)}
+  ${S.challenges.length ? `<div class="grid g2">${S.challenges.map(c => { const s = stats(c); return `<div class="card chcard" data-act="openCh" data-id="${c.id}"><div style="display:flex;gap:16px;align-items:center">${ring(s.pct)}<div class="grow"><div class="label">${TYPES[c.type].short}</div><div class="serif" style="font-size:21px;font-weight:700;margin-top:2px">${esc(c.name)}</div>
+      <div class="small muted" style="margin-top:4px">${TYPES[c.type].noMoney ? `${s.doneN} of ${s.n} no-spend days` : `${money(s.saved)} saved of ${money(s.total)}`}</div></div></div>
+      <div class="minigrid">${s.B.slice(0, 60).map(b => `<i class="${b.done?'d':b.due && b.due < weekStart() ? 'm' : ''}"></i>`).join('')}${s.n > 60 ? `<span class="tiny muted">+${s.n-60}</span>` : ''}</div>
+      <div class="tiny muted" style="margin-top:8px">${s.complete ? 'Complete 🎉' : s.next && s.next.due ? 'Next: '+chLabel(c, s.next)+' · '+nice(s.next.due) : s.doneN+' of '+s.n+' done'}${c.goalId && S.goals.find(g => g.id === c.goalId) ? ' · for '+esc(S.goals.find(g => g.id === c.goalId).name) : ''}</div></div>`; }).join('')}</div>`
+    : `<div class="card">${illus('trophy', 'No challenge yet. Start one below, or tell us what you can save a week and we will pick one for you.')}</div>`}
+  <h2 class="serif" style="font-size:22px;margin:26px 0 12px">Start a new one</h2>
+  <div class="grid g3">${Object.keys(TYPES).map(k => libCard(k)).join('')}</div>`;
+}
+function libCard(k){ const T = TYPES[k]; const c = {type:k, base:T.base, count:T.n, style:'up', every:T.every, start:TODAY(), ticks:{}}; const s = stats(c);
+  return `<div class="card lib"><div class="cat big2">${ico(T.icon)}</div><b>${T.name}</b><div class="small muted">${T.desc}</div>
+    <div class="tiny" style="margin-top:auto;padding-top:10px">${T.noMoney ? '30 days · a habit, no money needed' : T.custom ? 'You set the rules' : `Classic version saves <b>${S.cur}${s.total.toLocaleString()}</b>`}</div>
+    <button class="btn gold sm" style="margin-top:10px" data-act="newChallenge" data-type="${k}">Start this</button></div>`; }
+function vChallenge(){
+  const c = S.challenges.find(x => x.id === selCh); if (!c) { view = 'challenges'; return vChallenges(); }
+  const s = stats(c), T = TYPES[c.type], g = S.goals.find(x => x.id === c.goalId), notMoved = Math.max(0, s.saved - (c.moved||0));
+  const big = s.n > 120;
+  return `${head(esc(c.name), T.name + (c.type !== 'nospend' && c.type !== 'env' ? ' · started '+longD(c.start) : ''), `<button class="btn sm" data-go="challenges">‹ All challenges</button><button class="btn sm" data-act="editCh" data-id="${c.id}">Edit</button>`)}
+  <div class="grid g4 keep" style="margin-bottom:18px">
+    <div class="card kpi"><div class="k">${T.noMoney ? 'Days done' : 'Saved'}</div><div class="v ${T.noMoney?'':'green-t'}">${T.noMoney ? s.doneN : money(s.saved)}</div><div class="tiny muted">${T.noMoney ? 'of '+s.n+' days' : 'of '+money(s.total)}</div></div>
+    <div class="card kpi"><div class="k">Progress</div><div class="v">${Math.round(s.pct*100)}%</div><div class="tiny muted">${s.doneN} of ${s.n} ${T.unit.toLowerCase()}s</div></div>
+    ${!everyOf(c) && !s.complete ? `<div class="card kpi"><div class="k">Left to fill</div><div class="v gold-t">${s.n - s.doneN}</div><div class="tiny muted">${money(s.total - s.saved)} still to save</div></div>` : `<div class="card kpi"><div class="k">${s.complete ? 'Status' : 'Next'}</div><div class="v gold-t">${s.complete ? 'Done 🎉' : s.next ? (T.noMoney ? '✓' : money(s.next.amt)) : '-'}</div><div class="tiny muted">${s.complete ? 'Challenge complete' : s.next ? chLabel(c, s.next) + (s.next.due ? ' · '+short(s.next.due) : '') : ''}</div></div>`}
+    <div class="card kpi"><div class="k">To catch up</div><div class="v ${s.missed.length?'':'green-t'}">${s.missed.length}</div><div class="tiny muted">${s.missed.length ? (T.noMoney ? 'earlier days' : money(s.missed.reduce((a,b) => a + b.amt, 0))+' in total') : 'all caught up'}</div></div>
+  </div>
+  <div class="card" style="margin-bottom:18px">
+    <h3>${T.noMoney ? 'Tap each day you only spent on essentials' : c.type === 'env' ? 'Tap an envelope when you fill it' : 'Tap a box when you save it'}
+      <span class="chipbar">${(c.type === 'env' || !everyOf(c)) && !T.noMoney ? `<button class="btn gold sm" data-act="draw" data-id="${c.id}">${ico('dice')} Draw one for me</button>` : ''}${s.missed.length && !T.noMoney ? `<button class="btn sm" data-act="catchList" data-id="${c.id}">Catch up</button>` : ''}</span></h3>
+    <div class="boxes ${big?'dense':''}">${s.B.map(b => { const miss = !b.done && b.due && b.due < weekStart(), now = !b.done && b.due && b.due >= weekStart() && b.due <= addD(weekStart(),6);
+      return `<button class="bx ${b.done?'d':''} ${miss?'m':''} ${now?'n':''} ${focusBox===b.i?'pulse':''}" data-act="tick" data-id="${c.id}" data-i="${b.i}" title="${chLabel(c,b)}${b.due?' · '+nice(b.due):''}${b.done?' · saved '+short(b.done):''}">
+        <span class="bn">${c.type === 'nospend' ? (b.due ? pd(b.due).getDate() : b.i+1) : c.type === 'penny' ? b.i+1 : c.type === 'env' ? b.i+1 : b.i+1}</span>${T.noMoney || big ? '' : `<span class="ba">${money(b.amt)}</span>`}</button>`; }).join('')}</div>
+    <div class="legend" style="margin-top:14px"><span><i style="background:var(--gold)"></i>Done</span>${everyOf(c) ? '<span><i style="background:transparent;border:2px solid var(--gold)"></i>Due this week</span><span><i style="background:transparent;border:2px dashed var(--red)"></i>To catch up (still counts)</span>' : ''}</div>
+  </div>
+  <div class="grid g2">
+    ${T.noMoney ? `<div class="card"><h3>Why no-spend days work</h3><div class="small" style="line-height:1.6">Each day you skip the extras is money that stays with you. Pair it with a goal: when the challenge ends, move what you did not spend into savings with <b>Add a saving</b>.</div></div>` :
+    `<div class="card"><h3>Is the money in your savings account?</h3><div class="small" style="line-height:1.6">Challenges work best when the money leaves your everyday account. ${notMoved > 0 ? `<b>${money(notMoved)}</b> is not marked as moved yet.` : '<b class="green-t">All moved. Well done.</b>'}</div>
+      ${notMoved > 0 ? `<button class="btn gold" style="margin-top:12px" data-act="moved" data-id="${c.id}">${ico('bank')} I moved ${money(notMoved)}</button>` : ''}</div>`}
+    <div class="card"><h3>Details</h3>
+      <div class="expl" style="margin-top:0">
+        ${T.noMoney ? '' : `<div><span>Total when complete</span><b>${money(s.total)}</b></div><div><span>Average a week</span><b>${money(s.perWeek)}</b></div><div><span>Biggest single step</span><b>${money(s.biggest)}</b></div>`}
+        <div><span>How often</span><b>${(EVERY.find(e => e[0] === everyOf(c))||[0,'Any order'])[1]}</b></div>${s.end ? `<div><span>Finishes</span><b>${longD(s.end)}</b></div>` : ''}
+        <div><span>Saving for</span><b>${g ? esc(g.name) : '<button class="link" data-act="editCh" data-id="'+c.id+'">Link a goal</button>'}</b></div></div>
+      <div class="chipbar" style="margin-top:12px"><button class="btn sm" data-act="ics" data-id="${c.id}">${ico('bell')} Reminders to my calendar</button><button class="btn sm red" data-act="delCh" data-id="${c.id}">Delete</button></div></div>
+  </div>`;
+}
+
+/* ---------- goals ---------- */
+function goalRow(g, compact){ const i = goalInfo(g);
+  return `<div class="row"><div class="cat">${ico('goals')}</div><div class="grow"><div class="nm">${esc(g.name)}</div><div class="meta">${money(i.saved)} of ${money(g.target)}${g.date ? ' · by '+longD(g.date) : ''}</div>${bar(i.pct, i.status==='green'?'green':'')}</div>
+    <span class="pill ${i.status}">${i.text}</span>${compact ? '' : `<button class="btn sm" data-act="addSaving" data-to="g:${g.id}">+ Add</button><button class="btn sm ghost" data-act="goalModal" data-id="${g.id}">Edit</button>`}</div>`; }
+function vGoals(){
+  const all = S.goals.map(g => ({g, i:goalInfo(g)}));
+  return `${head('Savings goals', 'What you are saving for, and what it takes each month.', `<button class="btn gold" data-act="goalModal">+ Add a goal</button>`)}
+  ${all.length ? `<div class="grid g2">${all.map(({g,i}) => `<div class="card"><div style="display:flex;gap:16px;align-items:center">${ring(i.pct)}<div class="grow"><div class="serif" style="font-size:21px;font-weight:700">${esc(g.name)}</div><div class="small muted">${money(i.saved)} of ${money(g.target)}</div></div><span class="pill ${i.status}">${i.text}</span></div>
+      <div class="expl"><div><span>Still to go</span><b>${money(i.left)}</b></div>${g.date ? `<div><span>By</span><b>${longD(g.date)}${i.ml ? ' · '+i.ml+' month'+(i.ml>1?'s':'') : ''}</b></div><div><span>Needed a month</span><b>${money(i.need||0)}</b></div>` : ''}<div><span>Your plan a month</span><b>${money(+g.monthly||0)}</b></div>
+      ${S.challenges.filter(c => c.goalId === g.id).map(c => `<div><span>From ${esc(c.name)}</span><b>${money(chSaved(c))}</b></div>`).join('')}</div>
+      <div class="chipbar" style="margin-top:12px"><button class="btn gold sm" data-act="addSaving" data-to="g:${g.id}">+ Add money</button><button class="btn sm" data-act="goalModal" data-id="${g.id}">Edit</button></div></div>`).join('')}</div>`
+    : `<div class="card">${illus('goals', 'Add a goal like "Holiday" or "New car". Then link a challenge to it and watch both grow together.')}</div>`}`;
+}
+
+/* ---------- sinking funds ---------- */
+const FEVERY = [[1,'Every month'],[3,'Every 3 months'],[6,'Every 6 months'],[12,'Every year'],[24,'Every 2 years'],[0,'Just once']];
+function vFunds(){
+  const all = S.funds.map(f => ({f, i:fundInfo(f)})).sort((a,b) => a.i.next < b.i.next ? -1 : 1), per = all.reduce((a,x) => a + (x.i.ready ? 0 : x.i.perMonth), 0);
+  return `${head('Sinking funds', 'Save a little every month for costs you know are coming.', `<button class="btn gold" data-act="fundModal">+ Add a fund</button>`)}
+  <div class="grid g3" style="margin-bottom:18px"><div class="card kpi"><div class="k">Set aside a month</div><div class="v gold-t">${money(per,0)}</div><div class="tiny muted">so every cost is paid in full</div></div>
+    <div class="card kpi"><div class="k">Ready</div><div class="v green-t">${all.filter(x => x.i.ready).length} of ${all.length}</div><div class="tiny muted">funds paid for before they arrive</div></div>
+    <div class="card kpi"><div class="k">In your funds</div><div class="v">${money(all.reduce((a,x) => a + x.i.saved, 0),0)}</div><div class="tiny muted">of ${money(all.reduce((a,x) => a + x.f.cost, 0),0)}</div></div></div>
+  ${all.length ? `<div class="card">${all.map(({f,i}) => `<div class="row"><div class="cat ${i.ready?'green':''}">${ico('repeat')}</div><div class="grow"><div class="nm">${esc(f.name)}</div><div class="meta">${money(f.cost)} · ${(FEVERY.find(e => e[0] === f.every)||FEVERY[3])[1].toLowerCase()} · next due ${longD(i.next)}</div>${bar(i.pct, i.ready?'green':'')}</div>
+      <div style="text-align:right"><div class="amt">${money(i.saved)}</div><div class="tiny muted">${i.ready ? 'ready' : money(i.perMonth,0)+'/month'}</div></div><span class="pill ${i.ready?'green':i.soon?'red':'grey'}">${i.ready?'✓ Ready':i.soon?'Due soon':'Saving'}</span>
+      <button class="btn sm" data-act="addSaving" data-to="f:${f.id}">+ Add</button><button class="btn sm" data-act="fundPaid" data-id="${f.id}">Paid it</button><button class="btn sm ghost" data-act="fundModal" data-id="${f.id}">Edit</button></div>`).join('')}</div>`
+    : `<div class="card">${illus('repeat', 'Add costs like car insurance, Christmas, birthdays or a phone upgrade. The app works out how much to put aside each month.')}<div class="tpl">${['Car insurance','Christmas','Birthdays','Car service','Holiday','Vet bills','Phone upgrade','Yearly subscriptions'].map(n => `<button class="env" data-act="fundModal" data-name="${n}">+ ${n}</button>`).join('')}</div></div>`}`;
+}
+
+/* ---------- emergency fund ---------- */
+function vEmergency(){
+  const E = S.emergency, sum = E.costs.reduce((a,c) => a + c.v, 0), target = sum * E.months, g = S.goals.find(x => x.id === E.goalId), have = g ? goalSaved(g) : 0, cov = sum ? have / sum : 0;
+  return `${head('Emergency fund', 'How long would your savings cover you if money stopped coming in?')}
+  <div class="grid g2">
+    <div class="card"><h3>Must-have costs each month <button class="btn sm" data-act="costModal">+ Add</button></h3>
+      ${E.costs.length ? E.costs.map(c => `<div class="row"><div class="grow"><div class="nm">${esc(c.n)}</div></div><div class="amt">${money(c.v)}</div><button class="btn sm ghost" data-act="costModal" data-id="${c.id}">Edit</button></div>`).join('') + `<div class="row"><div class="grow"><b>Total a month</b></div><div class="amt">${money(sum)}</div></div>`
+       : `${illus('shield', 'Add only the must-haves: rent, food, bills, transport, insurance.')}<div class="tpl">${['Rent or mortgage','Food','Utilities','Transport','Insurance','Phone and internet','Childcare'].map(n => `<button class="env" data-act="costModal" data-name="${n}">+ ${n}</button>`).join('')}</div>`}</div>
+    <div class="card hero"><div class="label">Your target</div><div class="big">${money(target,0)}</div><div class="small muted">${money(sum,0)} a month × ${E.months} months</div>
+      <label class="lbl">Months to cover</label><div class="seg">${[1,3,6,9,12].map(m => `<button class="${E.months===m?'on':''}" data-act="emMonths" data-v="${m}">${m}</button>`).join('')}</div>
+      <label class="lbl">The goal that holds it</label><select class="inp" onchange="emGoal(this.value)"><option value="">Choose a savings goal</option>${S.goals.map(x => `<option value="${x.id}" ${x.id===E.goalId?'selected':''}>${esc(x.name)}</option>`).join('')}</select>
+      ${g ? `<div class="expl"><div><span>Saved in ${esc(g.name)}</span><b>${money(have)}</b></div><div><span>Months covered now</span><b class="green-t">${cov.toFixed(1)} month${Math.abs(cov-1)<.05?'':'s'}</b></div><div><span>Still to save</span><b>${money(Math.max(0,target-have))}</b></div></div>${bar(target ? have/target : 0, 'green')}` : `<div class="tip">${ico('goals')}<div>No goal linked yet. <button class="link" data-act="emMakeGoal">Create an "Emergency fund" goal</button> and it fills from your deposits and challenges.</div></div>`}
+      <div class="tiny muted" style="margin-top:12px;line-height:1.5">Start with one month of costs, then build to three. Keep it somewhere easy to reach, but not in your spending account.</div></div>
+  </div>`;
+}
+window.emGoal = v => { S.emergency.goalId = v; save(); render(); };
+
+/* ---------- history ---------- */
+function vHistory(){
+  const rows = [];
+  S.deposits.forEach(d => rows.push({d:d.date, t:d.ts||0, amt:d.amount, what:toName(d.to), note:d.note, dep:d}));
+  S.challenges.forEach(c => { if (TYPES[c.type].noMoney) return; Object.keys(c.ticks).forEach(i => rows.push({d:c.ticks[i], t:0, amt:amountOf(c,+i), what:c.name, note:chLabel(c, {i:+i, due:dueOf(c,+i)})})); });
+  rows.sort((a,b) => a.d === b.d ? b.t - a.t : a.d < b.d ? 1 : -1);
+  return `${head('All deposits', 'Every saving, newest first.', `<button class="btn" data-act="csv">Download CSV</button><button class="btn gold" data-act="addSaving">+ Add a saving</button>`)}
+  <div class="card">${rows.length ? rows.slice(0, 400).map(r => `<div class="row"><div class="cat ${r.amt<0?'red':''}">${ico(r.dep ? (r.amt<0?'wallet':'piggy') : 'trophy')}</div><div class="grow"><div class="nm">${esc(r.what)}</div><div class="meta">${nice(r.d)}${r.note ? ' · '+esc(r.note) : ''}</div></div><div class="amt ${r.amt<0?'red-t':'green-t'}">${r.amt<0?'':'+'}${money(r.amt)}</div>${r.dep ? `<button class="btn sm ghost" data-act="depModal" data-id="${r.dep.id}">Edit</button>` : ''}</div>`).join('') : illus('piggy', 'Nothing yet. Tap "Add a saving" or tick a box in a challenge.')}</div>`;
+}
+const toName = to => { if (!to) return 'General savings'; const [k,id] = to.split(':'); const x = (k === 'g' ? S.goals : k === 'f' ? S.funds : []).find(y => y.id === id); return x ? x.name : 'General savings'; };
+
+/* ---------- settings ---------- */
+function vSettings(){
+  return `${head('Settings', 'Your name, colours, privacy and backups.')}
+  <div class="grid g2">
+    <div class="card"><h3>You</h3><label class="lbl">Your name</label><input class="inp" id="s_name" maxlength="40" value="${esc(S.name)}">
+      <label class="lbl">Currency</label><select class="inp" id="s_cur">${CURS.map(c => `<option ${c===S.cur?'selected':''}>${c}</option>`).join('')}</select>
+      <div class="acts" style="justify-content:flex-start"><button class="btn gold" data-act="saveSettings">Save</button></div></div>
+    <div class="card"><h3>Look and feel</h3>
+      <button class="btn" data-act="themeModal">${ico('theme')} Colour theme: ${(THEMES.find(t => t[0] === S.theme)||THEMES[0])[1]}</button>
+      <label class="lbl">Text size</label><div class="seg">${[['md','Normal'],['lg','Larger'],['xl','Largest']].map(([v,l]) => `<button class="${S.profile.size===v?'on':''}" data-act="pick" data-f="size" data-v="${v}">${l}</button>`).join('')}</div>
+      <label class="lbl">Contrast</label><div class="seg"><button class="${!S.profile.contrast?'on':''}" data-act="pick" data-f="contrast" data-v="">Normal</button><button class="${S.profile.contrast?'on':''}" data-act="pick" data-f="contrast" data-v="1">High</button></div>
+      <label class="lbl">Celebrations</label><div class="seg"><button class="${!S.profile.calm?'on':''}" data-act="pick" data-f="calm" data-v="">Confetti on</button><button class="${S.profile.calm?'on':''}" data-act="pick" data-f="calm" data-v="1">Calm (no confetti)</button></div></div>
+    <div class="card"><h3>Privacy</h3>
+      <div class="small muted" style="line-height:1.55">Everything stays on this device. Nothing is sent to us or anyone else. There is no account and no bank connection.</div>
+      <div class="chipbar" style="margin-top:12px"><button class="btn" data-act="privacy">${ico(S.profile.privacy?'eyeoff':'eye')} ${S.profile.privacy?'Show amounts':'Hide amounts'}</button><button class="btn" data-act="pinModal">${ico('lock')} ${lockInfo.locked?'Change or remove PIN':'Protect with a PIN'}</button>${lockInfo.locked?'<button class="btn" data-act="lockNow">Lock now</button>':''}</div></div>
+    <div class="card"><h3>Backups ${S.lastBackup ? `<span class="pill green">last ${longD(S.lastBackup)}</span>` : '<span class="pill grey">none yet</span>'}</h3>
+      <div class="small muted" style="line-height:1.55">A backup file brings everything back on a new phone or after reinstalling.${lockInfo.locked ? ' Backups are encrypted with your PIN.' : ''}</div>
+      <div class="chipbar" style="margin-top:12px"><button class="btn gold" data-act="backup">Download a backup</button><button class="btn" data-act="shareBackup">Send to my other device</button><button class="btn" data-act="restore">Restore a backup</button>
+      ${FSA ? (abState === 'on' ? '<button class="btn" data-act="abOff">Turn off auto-backup</button>' : abState === 'paused' ? '<button class="btn" data-act="abResume">Resume auto-backup</button>' : '<button class="btn" data-act="abOn">Turn on auto-backup</button>') : ''}</div>
+      <input type="file" id="restoreFile" accept=".json,application/json" hidden></div>
+    <div class="card"><h3>Reminders</h3><div class="small muted" style="line-height:1.55">Add your challenge days and sinking fund due dates to your phone or computer calendar, with a nudge the day before.</div>
+      <div class="chipbar" style="margin-top:12px"><button class="btn" data-act="ics">${ico('bell')} Add all reminders to my calendar</button></div></div>
+    <div class="card"><h3>App</h3>
+      <div class="chipbar">${canOfferInstall() ? `<button class="btn gold" data-act="install">${ico('plus')} Install the app</button>` : '<span class="pill green">Installed</span>'}<button class="btn" data-act="tour">Show me around</button><button class="btn" data-act="exampleAgain">Load the example</button><button class="btn red" data-act="erase">Erase everything</button></div></div>
+  </div>`;
+}
+
+/* ---------- help ---------- */
+const FAQ = [
+ ['Challenges', [
+  ['Which challenge should I pick?', 'Tap "Pick for me" and type what you could comfortably save in a week. The app sizes each challenge to fit, so it never starts too big.'],
+  ['I missed a week. Have I failed?', 'No. Missed boxes stay open as "to catch up" and still count whenever you fill them. There are no streaks to lose.'],
+  ['How does the 100 envelope challenge work?', 'There are 100 envelopes numbered 1 to 100. Tap "Draw one for me" to get a random envelope, save that amount, and it turns gold. Change "Amount each" to make it bigger or smaller.'],
+  ['Can I change the amounts?', 'Yes. Open a challenge and tap Edit. You can change the amount, the start date and whether it goes up, down or stays the same.'],
+  ['What does "I moved it" mean?', 'Challenges work best when the money really leaves your everyday account. When you move it to your savings account, tap "I moved it" so you know it is safe.']]],
+ ['Goals and funds', [
+  ['What is a sinking fund?', 'Money you put aside a little each month for a cost you know is coming, like car insurance or Christmas. The app tells you how much a month and marks it Ready when it is covered.'],
+  ['Can a challenge count toward a goal?', 'Yes. Edit the challenge and choose the goal under "Saving for". Everything you tick adds to that goal.'],
+  ['I took money out.', 'Tap "Add a saving", choose where it came from and turn on "Money taken out". For a sinking fund, use "Paid it".']]],
+ ['Your data and privacy', [
+  ['Where are my numbers saved?', 'Only on this device, in this browser. They are never sent to us or anyone else. There is no account and no bank connection.'],
+  ['Does this move real money?', 'No. It tracks what you save. You move the money yourself in your bank.'],
+  ['I use a phone and a laptop. Do they sync?', 'Each device keeps its own copy. To move your numbers, go to Settings, tap "Send to my other device", then Restore on the other one.'],
+  ['What if I delete the app or change phones?', 'Your backup brings everything back. Save a backup now and then (Settings). When you open the app again, choose "Restore my backup".'],
+  ['I forgot my PIN.', 'Your numbers are encrypted with it, so they cannot be opened without it. That is what keeps them private. If you have a backup, erase and restore it.']]],
+ ['Installing the app', [
+  ['How do I put it on my phone?', 'iPhone: open in Safari, tap Share, then Add to Home Screen. Android: open in Chrome, tap the menu, then Install app. Computer: click Install app in the sidebar.'],
+  ['Does it work without internet?', 'Yes. Once opened or installed, it works offline.'],
+  ['How do updates arrive?', 'Automatically. The next time you open the app online, you get the newest version. Your numbers are not touched.']]]];
+function vHelp(){
+  return `${head('Help & FAQ', 'Short answers in plain words', `<button class="btn gold" data-act="tour">${ico('spark')} Show me around</button>`)}
+  <div class="card" style="margin-bottom:18px"><input class="inp" id="faqQ" placeholder="Search, for example: envelope, backup, PIN" oninput="faqFilter(this.value)"></div>
+  <div class="grid g2">${FAQ.map(([sec, qs]) => `<div class="card faq"><h3>${sec}</h3>${qs.map(([q,a]) => `<details data-q="${esc((q+' '+a).toLowerCase())}"><summary>${esc(q)}</summary><div>${esc(a)}</div></details>`).join('')}</div>`).join('')}</div>
+  <div class="card" style="margin-top:18px"><h3>Still stuck?</h3><div class="small" style="line-height:1.55">Message the seller through Etsy (You › Purchases › your order › Message seller). A real person answers.</div></div>`;
+}
+window.faqFilter = q => { q = q.toLowerCase().trim(); document.querySelectorAll('.faq details').forEach(d => { const hit = !q || d.dataset.q.includes(q); d.style.display = hit ? '' : 'none'; if (q && hit) d.open = true; }); };
+
+/* ---------- modal + helpers ---------- */
+function modal(html){ document.getElementById('modal').innerHTML = html; document.getElementById('mask').classList.add('on'); setTimeout(() => { const f = document.querySelector('#modal input:not([type=checkbox]):not([type=date])'); if (f && !('ontouchstart' in window)) f.focus(); }, 50); }
+function close(){ document.getElementById('mask').classList.remove('on'); }
+function val(id){ const e = document.getElementById(id); return e ? e.value.trim() : ''; }
+function num(id){ const v = parseFloat(val(id).replace(',', '.').replace(/[^0-9.\-]/g,'')); return isNaN(v) ? 0 : v; }
+let toastT; function toast(msg, undo){ const t = document.getElementById('toast'); t.innerHTML = esc(msg) + (undo ? ' <button id="undoB">Undo</button>' : ''); t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 4200); if (undo) document.getElementById('undoB').onclick = () => { undo(); t.classList.remove('on'); }; }
+const snapshot = () => JSON.stringify(S);
+function restoreSnap(s){ S = clean(JSON.parse(s)); save(); render(); }
+const opts = (list, cur) => list.map(([v,l]) => `<option value="${v}" ${String(v)===String(cur)?'selected':''}>${l}</option>`).join('');
+function dl(blob, name){ const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); }
+const toOpts = cur => `<option value="">General savings</option>${S.goals.length ? '<optgroup label="Savings goals">'+S.goals.map(g => `<option value="g:${g.id}" ${cur==='g:'+g.id?'selected':''}>${esc(g.name)}</option>`).join('')+'</optgroup>' : ''}${S.funds.length ? '<optgroup label="Sinking funds">'+S.funds.map(f => `<option value="f:${f.id}" ${cur==='f:'+f.id?'selected':''}>${esc(f.name)}</option>`).join('')+'</optgroup>' : ''}`;
+
+/* ---------- wins ---------- */
+const MILES = [100,250,500,1000,2000,3000,5000,7500,10000,15000,25000,50000];
+function addWin(t){ S.wins.push({t, d:TODAY()}); if (S.wins.length > 60) S.wins = S.wins.slice(-60); }
+let pendingParty = false;
+function checkWins(){ if (!S || !S.setupDone) return; let n = 0; const T = totals().all;
+  MILES.forEach(m => { if (T >= m && !S.miles.includes(m)) { S.miles.push(m); if (!S.quietWins) { addWin('You passed '+money(m,0)+' saved'); n++; } } });
+  S.challenges.forEach(c => { const s = stats(c); if (s.complete && !c.won) { c.won = true; if (!S.quietWins) { addWin(c.name + ' complete'); n++; } } if (!s.complete && c.won) c.won = false; });
+  S.goals.forEach(g => { const i = goalInfo(g); if (g.target > 0 && i.saved >= g.target && !g.won) { g.won = true; if (!S.quietWins) { addWin('Goal reached: ' + g.name); n++; } } if (g.target > 0 && i.saved < g.target && g.won) g.won = false; });
+  S.quietWins = false; if (n) { save(true); pendingParty = true; setTimeout(() => { if (pendingParty) { pendingParty = false; confetti(); } }, 60); } }
+function confetti(){ if (S && S.profile && S.profile.calm) return;
+  const c = document.createElement('canvas'); c.id = 'confetti'; document.body.appendChild(c); const x = c.getContext('2d'); c.width = innerWidth; c.height = innerHeight;
+  const cols = [getComputedStyle(document.documentElement).getPropertyValue('--gold'), '#ffffff', '#7DD3A1', '#E58A74', '#8FB8F0'];
+  const P = Array.from({length:120}, () => ({x:innerWidth/2, y:innerHeight/3, vx:(Math.random()-.5)*14, vy:Math.random()*-12-4, s:4+Math.random()*5, c:cols[Math.floor(Math.random()*cols.length)], r:Math.random()*6}));
+  let f = 0; (function step(){ x.clearRect(0,0,c.width,c.height); P.forEach(p => { p.vy += .35; p.x += p.vx; p.y += p.vy; p.r += .2; x.save(); x.translate(p.x,p.y); x.rotate(p.r); x.fillStyle = p.c; x.fillRect(-p.s/2,-p.s/2,p.s,p.s*1.6); x.restore(); });
+    if (++f < 110) requestAnimationFrame(step); else c.remove(); })();
+}
+
+/* ---------- challenge form ---------- */
+function chForm(c, isNew){
+  const T = TYPES[c.type];
+  const countSel = c.type === 'env' ? `<label class="lbl">How many envelopes</label><select class="inp" id="c_count" onchange="chPreview()">${opts([[50,'50 envelopes'],[100,'100 envelopes (classic)'],[200,'200 envelopes']], c.count)}</select>`
+    : c.type === 'nospend' ? `<label class="lbl">How many days</label><select class="inp" id="c_count" onchange="chPreview()">${opts([[7,'7 days'],[14,'14 days'],[21,'21 days'],[30,'30 days'],[60,'60 days'],[90,'90 days']], c.count)}</select>`
+    : c.type === 'custom' ? `<div class="inl"><div><label class="lbl">How many boxes</label><input class="inp" id="c_count" inputmode="numeric" value="${c.count}" oninput="chPreview()"></div><div><label class="lbl">How often</label><select class="inp" id="c_every" onchange="chPreview()">${opts(EVERY, c.every)}</select></div></div>` : '';
+  return `<h2>${isNew ? 'Start: ' : 'Edit: '}${T.name}</h2><div class="small muted">${T.desc}</div>
+    <label class="lbl">Name</label><input class="inp" id="c_name" maxlength="60" value="${esc(c.name || T.name)}">
+    ${countSel}
+    ${T.noMoney ? '' : `<div class="inl"><div><label class="lbl">${c.type === 'env' ? 'Amount each (envelope 1 = this)' : c.type === 'custom' ? 'Amount' : 'First amount'}</label><input class="inp" id="c_base" inputmode="decimal" value="${c.base}" oninput="chPreview()"></div>
+      ${T.styles ? `<div><label class="lbl">How it grows</label><select class="inp" id="c_style" onchange="chPreview()">${opts([['up','Goes up each time'],['down','Starts big, goes down'],['same','Same every time']], c.style)}</select></div>` : ''}</div>`}
+    ${c.type === 'env' ? '' : `<label class="lbl">Start date</label><input class="inp" id="c_start" type="date" value="${c.start}" onchange="chPreview()">`}
+    ${T.noMoney ? '' : `<label class="lbl">Saving for (optional)</label><select class="inp" id="c_goal"><option value="">Nothing in particular</option>${S.goals.map(g => `<option value="${g.id}" ${g.id===c.goalId?'selected':''}>${esc(g.name)}</option>`).join('')}</select>`}
+    <div id="c_prev"></div>
+    <div class="acts">${isNew ? '' : `<button class="btn red" data-act="delCh" data-id="${c.id}">Delete</button>`}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="saveCh" data-id="${isNew ? '' : c.id}" data-type="${c.type}">${isNew ? 'Start challenge' : 'Save'}</button></div>`;
+}
+function readCh(c){ const T = TYPES[c.type];
+  c.name = val('c_name') || T.name;
+  if (document.getElementById('c_count')) c.count = Math.max(1, Math.min(400, Math.round(num('c_count')) || T.n));
+  if (document.getElementById('c_every')) c.every = +val('c_every');
+  if (document.getElementById('c_base')) c.base = Math.max(0, num('c_base'));
+  if (document.getElementById('c_style')) c.style = val('c_style');
+  if (document.getElementById('c_start')) c.start = val('c_start') || TODAY();
+  if (document.getElementById('c_goal')) c.goalId = val('c_goal');
+  return c; }
+let chDraft = null;
+window.chPreview = () => { if (!chDraft) return; const c = readCh(Object.assign({}, chDraft, {ticks:{}})); const s = stats(c), T = TYPES[c.type]; const el = document.getElementById('c_prev'); if (!el) return;
+  el.innerHTML = T.noMoney ? `<div class="verdict y">${s.n} days, ${everyOf(c) ? 'from '+longD(c.start)+' to '+longD(s.end) : ''}. Tick each day you only spend on essentials.</div>`
+    : `<div class="verdict y">You will save <b>${money(s.total)}</b>${s.end ? ' by <b>'+longD(s.end)+'</b>' : ''}. That is about <b>${money(s.perWeek)}</b> a week on average, and the biggest single step is <b>${money(s.biggest)}</b>.</div>`; };
+
+/* ---------- actions ---------- */
+const A = {
+  close(){ close(); },
+  openCh(el){ selCh = el.dataset.id; view = 'ch'; focusBox = null; render(); scrollTo(0,0); },
+  newChallenge(el){ const type = el && el.dataset.type;
+    if (!type) return modal(`<h2>Start a challenge</h2><div class="small muted">Not sure? <button class="link" data-act="pickForMe">Let us pick one that fits</button>.</div>
+      ${Object.keys(TYPES).map(k => `<button class="row pickrow" data-act="newChallenge" data-type="${k}"><div class="cat">${ico(TYPES[k].icon)}</div><div class="grow" style="text-align:left"><div class="nm">${TYPES[k].name}</div><div class="meta">${TYPES[k].desc}</div></div></button>`).join('')}
+      <div class="acts"><button class="btn ghost" data-act="close">Cancel</button></div>`);
+    const T = TYPES[type]; chDraft = {type, name:T.name, base:+(el.dataset.base || T.base), count:+(el.dataset.count || T.n), style:'up', every:T.every, start:TODAY(), ticks:{}, goalId:''};
+    modal(chForm(chDraft, true)); chPreview(); },
+  editCh(el){ const c = S.challenges.find(x => x.id === el.dataset.id); if (!c) return; chDraft = Object.assign({}, c); modal(chForm(c, false)); chPreview(); },
+  saveCh(el){ const id = el.dataset.id, type = el.dataset.type; let c = S.challenges.find(x => x.id === id);
+    if (!c) { c = {id:uid(), type, ticks:{}, moved:0, created:TODAY(), style:'up', every:TYPES[type].every, count:TYPES[type].n, base:TYPES[type].base, start:TODAY(), goalId:''}; readCh(c); S.challenges.push(c); selCh = c.id; view = 'ch'; S.quietWins = false; }
+    else { readCh(c); Object.keys(c.ticks).forEach(k => { if (+k >= c.count) delete c.ticks[k]; }); }
+    save(); close(); render(); scrollTo(0,0); toast(id ? 'Challenge updated.' : 'Challenge started. Tap a box each time you save.'); },
+  delCh(el){ const snap = snapshot(); S.challenges = S.challenges.filter(x => x.id !== el.dataset.id); save(); close(); view = 'challenges'; render(); toast('Challenge deleted.', () => restoreSnap(snap)); },
+  tick(el){ const c = S.challenges.find(x => x.id === el.dataset.id); if (!c) return; const i = +el.dataset.i, snap = snapshot();
+    if (c.ticks[i]) { delete c.ticks[i]; save(); render(); toast('Unticked.', () => restoreSnap(snap)); return; }
+    c.ticks[i] = TODAY(); focusBox = i; save(); render(); const a = amountOf(c, i);
+    toast(TYPES[c.type].noMoney ? 'No-spend day ticked. Nice.' : 'Saved ' + money(a) + '. Move it to your savings account when you can.', () => restoreSnap(snap)); },
+  draw(el){ const c = S.challenges.find(x => x.id === el.dataset.id); if (!c) return; const left = boxes(c).filter(b => !b.done); if (!left.length) return toast('Every envelope is filled. Amazing.');
+    const b = left[Math.floor(Math.random() * left.length)];
+    modal(`<div class="drawbox"><div class="label">${esc(c.name)}</div><div class="envbig"><span>${TYPES[c.type].unit} ${b.i+1}</span><b>${money(b.amt)}</b></div>
+      <div class="small muted">Save this amount, then tap below. ${left.length - 1} left after this one.</div></div>
+      <div class="acts"><button class="btn ghost" data-act="draw" data-id="${c.id}">${ico('dice')} Draw again</button><button class="btn gold" data-act="drawDone" data-id="${c.id}" data-i="${b.i}">I saved it</button></div>`); },
+  drawDone(el){ close(); A.tick(el); },
+  catchList(el){ const only = el && el.dataset.id; const list = S.challenges.filter(c => !only || c.id === only).flatMap(c => stats(c).missed.map(b => ({c,b})));
+    if (!list.length) return toast('All caught up.');
+    modal(`<h2>Catch up, no stress</h2><div class="small muted">These are from earlier weeks. Do one, a few or all of them. They count whenever you do them.</div>
+      <div style="margin-top:10px;max-height:52vh;overflow:auto">${list.map(({c,b}) => boxRow(c,b)).join('')}</div>
+      <div class="acts"><button class="btn ghost" data-act="close">Close</button><button class="btn gold" data-act="catchAll" data-id="${only||''}">Mark all ${list.length} done today</button></div>`); },
+  catchAll(el){ const only = el.dataset.id, snap = snapshot(); let n = 0; S.challenges.filter(c => !only || c.id === only).forEach(c => stats(c).missed.forEach(b => { c.ticks[b.i] = TODAY(); n++; }));
+    save(); close(); render(); toast(n + ' caught up. That is real progress.', () => restoreSnap(snap)); },
+  moved(el){ const c = S.challenges.find(x => x.id === el.dataset.id); if (!c) return; c.moved = chSaved(c); save(); render(); toast('Marked as moved to your savings account.'); },
+  movedAll(){ S.challenges.forEach(c => c.moved = chSaved(c)); save(); render(); toast('All marked as moved. Safe from impulse spending.'); },
+  pickForMe(){ modal(`<h2>Pick a challenge for me</h2><div class="small muted">How much could you put aside in a normal week without it hurting?</div>
+      <div class="inl" style="align-items:flex-end"><div><label class="lbl">Each week, about</label><input class="inp" id="pf_w" inputmode="decimal" value="${S.pfWeek || 20}" oninput="pfRun()"></div></div><div id="pf_out"></div>
+      <div class="acts"><button class="btn ghost" data-act="close">Close</button></div>`); pfRun(); },
+  addSaving(el){ const to = (el && el.dataset.to) || ''; depForm({id:'', date:TODAY(), amount:'', to, note:''}); },
+  depModal(el){ const d = S.deposits.find(x => x.id === el.dataset.id); if (d) depForm(d); },
+  saveDep(el){ const amt = Math.abs(num('d_amt')); if (!(amt > 0)) return toast('Type an amount first.'); const out = document.getElementById('d_out').checked;
+    let d = S.deposits.find(x => x.id === el.dataset.id); const isNew = !d; if (!d) { d = {id:uid(), ts:Date.now()}; S.deposits.push(d); }
+    d.amount = r2(out ? -amt : amt); d.to = val('d_to'); d.date = val('d_date') || TODAY(); d.note = val('d_note').slice(0,80); save(); close(); render();
+    toast(isNew ? (out ? 'Taken out of ' + toName(d.to) + '.' : 'Saved ' + money(amt) + ' to ' + toName(d.to) + '.') : 'Updated.'); },
+  delDep(el){ const snap = snapshot(); S.deposits = S.deposits.filter(x => x.id !== el.dataset.id); save(); close(); render(); toast('Deleted.', () => restoreSnap(snap)); },
+  goalModal(el){ const g = el && el.dataset.id ? S.goals.find(x => x.id === el.dataset.id) : {};
+    modal(`<h2>${g.id ? 'Edit goal' : 'Add a savings goal'}</h2><label class="lbl">What are you saving for?</label><input class="inp" id="g_name" maxlength="60" value="${esc(g.name||'')}" placeholder="Holiday, new car, house deposit">
+      <div class="inl"><div><label class="lbl">Target</label><input class="inp" id="g_t" inputmode="decimal" value="${g.target??''}"></div><div><label class="lbl">By when (optional)</label><input class="inp" id="g_d" type="date" value="${g.date||''}"></div></div>
+      <div class="inl"><div><label class="lbl">Already saved</label><input class="inp" id="g_s" inputmode="decimal" value="${g.saved0??''}"></div><div><label class="lbl">I plan to save a month</label><input class="inp" id="g_m" inputmode="decimal" value="${g.monthly??''}"></div></div>
+      <div class="acts">${g.id ? `<button class="btn red" data-act="delGoal" data-id="${g.id}">Delete</button>` : ''}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="saveGoal" data-id="${g.id||''}">Save</button></div>`); },
+  saveGoal(el){ let g = S.goals.find(x => x.id === el.dataset.id); if (!g) { g = {id:uid()}; S.goals.push(g); } g.name = val('g_name') || 'My goal'; g.target = Math.max(0, num('g_t')); g.date = val('g_d'); g.saved0 = num('g_s'); g.monthly = Math.max(0, num('g_m')); save(); close(); render(); },
+  delGoal(el){ const snap = snapshot(), id = el.dataset.id; S.goals = S.goals.filter(x => x.id !== id); S.challenges.forEach(c => { if (c.goalId === id) c.goalId = ''; }); S.deposits.forEach(d => { if (d.to === 'g:'+id) d.to = ''; }); if (S.emergency.goalId === id) S.emergency.goalId = '';
+    save(); close(); render(); toast('Goal deleted. Its deposits stay in General savings.', () => restoreSnap(snap)); },
+  fundModal(el){ const f = el && el.dataset.id ? S.funds.find(x => x.id === el.dataset.id) : {name: el && el.dataset.name || '', every:12, due:addM(TODAY(), 6)};
+    modal(`<h2>${f.id ? 'Edit sinking fund' : 'Add a sinking fund'}</h2><label class="lbl">Name</label><input class="inp" id="f_name" maxlength="60" value="${esc(f.name||'')}" placeholder="Car insurance">
+      <div class="inl"><div><label class="lbl">Cost</label><input class="inp" id="f_cost" inputmode="decimal" value="${f.cost??''}"></div><div><label class="lbl">Next due date</label><input class="inp" id="f_due" type="date" value="${f.due}"></div></div>
+      <div class="inl"><div><label class="lbl">Comes round</label><select class="inp" id="f_every">${opts(FEVERY, f.every)}</select></div><div><label class="lbl">Already saved</label><input class="inp" id="f_s" inputmode="decimal" value="${f.saved0??''}"></div></div>
+      <div class="acts">${f.id ? `<button class="btn red" data-act="delFund" data-id="${f.id}">Delete</button>` : ''}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="saveFund" data-id="${f.id||''}">Save</button></div>`); },
+  saveFund(el){ let f = S.funds.find(x => x.id === el.dataset.id); if (!f) { f = {id:uid()}; S.funds.push(f); } f.name = val('f_name') || 'Sinking fund'; f.cost = Math.max(0, num('f_cost')); f.due = val('f_due') || TODAY(); f.every = +val('f_every'); f.saved0 = num('f_s'); save(); close(); render(); },
+  delFund(el){ const snap = snapshot(), id = el.dataset.id; S.funds = S.funds.filter(x => x.id !== id); S.deposits.forEach(d => { if (d.to === 'f:'+id) d.to = ''; }); save(); close(); render(); toast('Fund deleted.', () => restoreSnap(snap)); },
+  fundPaid(el){ const f = S.funds.find(x => x.id === el.dataset.id); if (!f) return; const i = fundInfo(f), snap = snapshot(), amt = Math.min(f.cost, Math.max(0, i.saved)) || f.cost;
+    S.deposits.push({id:uid(), date:TODAY(), amount:-r2(amt), to:'f:'+f.id, note:'Paid ' + f.name, ts:Date.now()}); if (f.every && fundNext(f) <= addD(TODAY(), 45)) f.due = addM(fundNext(f), f.every);
+    save(); render(); toast('Paid from the fund. It starts again for next time.', () => restoreSnap(snap)); },
+  costModal(el){ const c = el && el.dataset.id ? S.emergency.costs.find(x => x.id === el.dataset.id) : {n: el && el.dataset.name || ''};
+    modal(`<h2>${c.id ? 'Edit cost' : 'Add a must-have cost'}</h2><div class="inl"><div><label class="lbl">What</label><input class="inp" id="e_n" maxlength="40" value="${esc(c.n||'')}"></div><div><label class="lbl">Per month</label><input class="inp" id="e_v" inputmode="decimal" value="${c.v??''}"></div></div>
+      <div class="acts">${c.id ? `<button class="btn red" data-act="delCost" data-id="${c.id}">Delete</button>` : ''}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="saveCost" data-id="${c.id||''}">Save</button></div>`); },
+  saveCost(el){ let c = S.emergency.costs.find(x => x.id === el.dataset.id); if (!c) { c = {id:uid()}; S.emergency.costs.push(c); } c.n = val('e_n') || 'Cost'; c.v = Math.max(0, num('e_v')); save(); close(); render(); },
+  delCost(el){ S.emergency.costs = S.emergency.costs.filter(x => x.id !== el.dataset.id); save(); close(); render(); },
+  emMonths(el){ S.emergency.months = +el.dataset.v; save(); render(); },
+  emMakeGoal(){ const sum = S.emergency.costs.reduce((a,c) => a + c.v, 0); const g = {id:uid(), name:'Emergency fund', target:r2(sum * S.emergency.months), saved0:0, monthly:0, date:''}; S.goals.push(g); S.emergency.goalId = g.id; save(); render(); toast('Goal created. Add money to it or link a challenge.'); },
+  saveSettings(){ S.name = val('s_name').slice(0,40); S.cur = CURS.includes(val('s_cur')) ? val('s_cur') : '$'; save(); render(); toast('Saved.'); },
+  pick(el){ const f = el.dataset.f, v = el.dataset.v; S.profile[f] = v === '1' ? true : v === '' ? false : v; save(); render(); },
+  privacy(){ S.profile.privacy = !S.profile.privacy; save(); render(); toast(S.profile.privacy ? 'Amounts hidden. Tap the eye to show them again.' : 'Amounts showing.'); },
+  themeModal(){ modal(`<h2>Colour theme</h2><div class="muted small">Pick the look that feels good to you. Colours keep the same meaning in every theme.</div>
+    <div class="swatches">${THEMES.map(t => `<button class="sw ${S.theme===t[0]?'on':''}" data-act="setTheme" data-v="${t[0]}"><div class="pv" style="background:${t[3][0]}"><i style="height:26px;background:${t[3][1]}"></i><i style="height:38px;background:${t[3][2]}"></i><i style="height:18px;background:${t[3][1]}"></i></div><b>${t[1]}</b><small>${t[2]}</small></button>`).join('')}</div>
+    <div class="acts"><button class="btn gold" data-act="close">Done</button></div>`); },
+  setTheme(el){ S.theme = el.dataset.v; save(); render(); A.themeModal(); },
+  pinModal(){ modal(`<h2>${lockInfo.locked ? 'Change your PIN' : 'Protect with a PIN'}</h2><div class="small muted" style="line-height:1.5">Your numbers are encrypted on this device with your PIN (AES-256). <b>If you forget the PIN, they cannot be recovered</b>, so keep a backup.</div>
+    <div class="inl"><div><label class="lbl">New PIN (4 to 8 numbers)</label><input class="inp" id="pin1" type="password" inputmode="numeric" maxlength="8" autocomplete="new-password"></div><div><label class="lbl">Type it again</label><input class="inp" id="pin2" type="password" inputmode="numeric" maxlength="8" autocomplete="new-password"></div></div>
+    <div class="acts">${lockInfo.locked ? '<button class="btn red" data-act="pinRemove">Remove PIN</button>' : ''}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="pinSave">Save PIN</button></div>`); },
+  async pinSave(){ const a = val('pin1'), b = val('pin2'); if (!/^\d{4,8}$/.test(a)) return toast('Use 4 to 8 numbers.'); if (a !== b) return toast('The two PINs do not match.');
+    const salt = newSalt(); cryptoKey = await deriveKey(a, salt); lockInfo = {locked:true, salt}; saveLock(); save(); close(); render(); toast('PIN saved. Your numbers are now encrypted on this device.'); },
+  pinRemove(){ if (!confirm('Remove the PIN? Your numbers will no longer be encrypted on this device.')) return; lockInfo = {locked:false}; saveLock(); cryptoKey = null; save(); close(); render(); toast('PIN removed.'); },
+  lockNow(){ lockNow(); },
+  async backup(){ dl(new Blob([await backupText()], {type:'application/json'}), `savings-challenge-backup-${TODAY()}.json`); markBackedUp(); render(); toast(lockInfo.locked ? 'Encrypted backup downloaded. You need your PIN to restore it.' : 'Backup downloaded. Keep it somewhere safe.'); },
+  async shareBackup(){ const f = new File([await backupText()], `savings-challenge-backup-${TODAY()}.json`, {type:'application/json'}); markBackedUp();
+    try { if (navigator.canShare && navigator.canShare({files:[f]})) { await navigator.share({files:[f], title:'Savings backup'}); return; } } catch(e){ if (e && e.name === 'AbortError') return; }
+    A.backup(); toast('Sharing is not supported here, so the backup was downloaded. Send that file to your other device.'); },
+  restore(){ let f = document.getElementById('restoreFile'); if (!f) { f = document.createElement('input'); f.type = 'file'; f.accept = '.json,application/json'; }
+    f.onchange = () => { const file = f.files[0]; if (!file) return; if (file.size > 8e6) return toast('That file is too big to be a backup.'); const r = new FileReader();
+      r.onload = () => { try { const d = JSON.parse(r.result); if (d && d.enc === 1 && d.ct && d.salt) return restoreEncrypted(d); if (!d || typeof d !== 'object' || !d.v || (d.kind && d.kind !== 'sig-savings')) throw 0;
+        const snap = S ? snapshot() : null; S = clean(d); S.setupDone = true; S.appWelcomed = true; S.quietWins = true; save(); view = 'home'; render(); toast('Backup restored. Welcome back.', snap ? () => restoreSnap(snap) : null); } catch(e){ toast('That file is not a Savings Challenge backup.'); } };
+      r.readAsText(file); }; f.click(); },
+  abOn(){ abOn(); }, abResume(){ abResume(); }, abOff(){ abOff(); },
+  backupLater(){ S.backupSnooze = TODAY(); save(true); render(); },
+  async install(){ if (deferredPrompt) { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice.catch(() => null); deferredPrompt = null; if (r && r.outcome === 'accepted') { S.installed = true; save(); } render(); return; } A.installHelp(); },
+  installLater(){ S.installHide = TODAY(); save(); render(); },
+  installHelp(){ let body;
+    if (inAppBrowser()) body = `<div class="verdict m">You are inside another app's browser (like Etsy or Instagram). Tap the <b>⋯</b> menu and choose <b>Open in Safari</b> or <b>Open in Chrome</b> first, then come back to this screen.</div>`;
+    else if (isIOS()) body = `<div class="muted small">iPhone and iPad install web apps from Safari. It takes 10 seconds.</div><div class="ios-steps"><div>Open this page in <b>Safari</b></div><div>Tap the <b>Share</b> button ${SHARE_ICON}</div><div>Scroll and tap <b>Add to Home Screen</b> ${ADD_ICON}</div><div>Tap <b>Add</b>. The <b>${APPNAME}</b> icon appears on your home screen</div></div>
+      <div class="tip">${ico('shield')}<div>Open it from the icon from now on. <b>Already added numbers in Safari?</b> Save a backup first (Settings), then choose <b>Restore my backup</b> in the installed app.</div></div>`;
+    else if (/android/i.test(navigator.userAgent)) body = `<div class="ios-steps"><div>Open this page in <b>Chrome</b></div><div>Tap the <b>⋮</b> menu at the top right</div><div>Tap <b>Install app</b> (or <b>Add to Home screen</b>)</div><div>Tap <b>Install</b></div></div>`;
+    else body = `<div class="ios-steps"><div><b>Chrome or Edge:</b> click the install icon ${ADD_ICON} at the right end of the address bar, or the menu › <b>Install ${APPNAME}</b> (Edge: <b>Apps › Install this site as an app</b>)</div><div>Click <b>Install</b>. It gets its own icon and window</div><div><b>Safari on Mac:</b> File › <b>Add to Dock</b></div></div>`;
+    modal(`<div style="display:flex;gap:14px;align-items:center"><img src="icon-192.png" alt="" style="width:60px;height:60px;border-radius:15px"><div><h2 style="margin:0">Install ${APPNAME}</h2><div class="tiny muted">Your own app icon, works offline, no app store needed</div></div></div>${body}<div class="acts"><button class="btn gold" data-act="close">Got it</button></div>`); },
+  ics(el){ const id = el && el.dataset.id; dl(new Blob([makeICS(id)], {type:'text/calendar'}), 'savings-reminders.ics'); toast('Open the file on your phone or computer to add the reminders.'); },
+  csv(){ const rows = [['Date','Amount','Where','Note']]; S.deposits.forEach(d => rows.push([d.date, d.amount, toName(d.to), d.note||'']));
+    S.challenges.forEach(c => { if (TYPES[c.type].noMoney) return; Object.keys(c.ticks).forEach(i => rows.push([c.ticks[i], amountOf(c,+i), c.name, chLabel(c, {i:+i, due:dueOf(c,+i)})])); });
+    rows.sort((a,b) => a[0] < b[0] ? -1 : 1); dl(new Blob([rows.map(r => r.map(x => '"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n')], {type:'text/csv'}), `savings-${TODAY()}.csv`); },
+  exampleAgain(){ if (!confirm('Replace your numbers with the example? Download a backup first if you want to keep them.')) return; S = example(); save(); view = 'home'; render(); },
+  startFresh(){ const keep = {theme:S.theme, cur:S.cur}; S = blank(); Object.assign(S, keep); save(true); onboard(0); },
+  erase(){ if (!confirm('Erase all your numbers from this device? This cannot be undone.')) return; localStorage.removeItem(KEY); lockInfo = {locked:false}; saveLock(); cryptoKey = null; idbSet('ab', undefined); S = null; onboard(0); },
+  tour(){ view = 'home'; render(); tour(0); },
+  obNext(el){ onboardNext(+el.dataset.s); }, obExample(){ S = example(); S.appWelcomed = true; save(); afterOpen(); },
+  obRestore(){ A.restore(); }, obSkip(el){ onboardNext(+el.dataset.s, true); },
+  waSave(){ const nm = val('wa_name'); if (nm) S.name = nm.slice(0,40); S.appWelcomed = true; save(); close(); render(); }
+};
+function depForm(d){ const out = d.amount < 0;
+  modal(`<h2>${d.id ? 'Edit' : 'Add a saving'}</h2>
+    <div class="inl"><div><label class="lbl">Amount</label><input class="inp" id="d_amt" inputmode="decimal" value="${d.amount === '' ? '' : Math.abs(d.amount)}" placeholder="25"></div><div><label class="lbl">Date</label><input class="inp" id="d_date" type="date" value="${d.date}"></div></div>
+    <label class="lbl">Where did it go?</label><select class="inp" id="d_to">${toOpts(d.to)}</select>
+    <label class="lbl">Note (optional)</label><input class="inp" id="d_note" maxlength="80" value="${esc(d.note||'')}" placeholder="Birthday money, skipped takeaway">
+    <label class="lbl" style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="d_out" ${out?'checked':''}> Money taken out (not added)</label>
+    <div class="quick">${[5,10,20,50,100].map(v => `<button class="qa" onclick="document.getElementById('d_amt').value=${v}">${money(v)}</button>`).join('')}</div>
+    <div class="acts">${d.id ? `<button class="btn red" data-act="delDep" data-id="${d.id}">Delete</button>` : ''}<button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" data-act="saveDep" data-id="${d.id||''}">Save</button></div>`); }
+window.pfRun = () => { const w = num('pf_w'); S.pfWeek = w; const el = document.getElementById('pf_out'); if (!el) return; if (!(w > 0)) { el.innerHTML = ''; return; }
+  const rows = suggest(w);
+  el.innerHTML = `<div class="small" style="margin:14px 0 6px">Sized to about <b>${money(w)}</b> a week. <b>Best fit first.</b></div>` + rows.map((r,k) => `<div class="card sug ${k===0?'best':''}"><div style="display:flex;gap:12px;align-items:center"><div class="cat">${ico(TYPES[r.type].icon)}</div><div class="grow"><b>${TYPES[r.type].name}</b>${k===0?' <span class="pill green">Best fit</span>':''}<div class="tiny muted">${r.type==='env' ? money(r.c.base)+' × envelope number' : 'Starts at '+money(r.c.base)} · about ${r.weeks} weeks</div></div></div>
+    <div class="expl"><div><span>You will save</span><b>${money(r.total)}</b></div><div><span>Average a week</span><b>${money(r.perWeek)}</b></div><div><span>Biggest single step</span><b>${money(r.biggest)}</b></div></div>
+    <button class="btn ${k===0?'gold':''} sm" style="margin-top:10px" data-act="newChallenge" data-type="${r.type}" data-base="${r.c.base}" data-count="${r.c.count}">Start this one</button></div>`).join(''); };
+
+/* ---------- lock screen ---------- */
+function shell(inner){ close(); document.getElementById('app').innerHTML = `<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">${inner}</div>`; }
+let pinTries = 0, pinWait = 0;
+function lockScreen(){ S = null; cryptoKey = null; document.documentElement.dataset.theme = 'midnight';
+  shell(`<div class="card" style="width:min(420px,100%);text-align:center"><img src="icon-192.png" alt="" style="width:72px;height:72px;border-radius:18px"><h2 class="serif" style="font-size:26px;margin:12px 0 4px">${APPNAME}</h2>
+    <div class="small muted">Your savings are locked with a PIN.</div>
+    <input class="inp" id="pinIn" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="Enter PIN" style="text-align:center;font-size:24px;letter-spacing:8px;margin-top:16px">
+    <div id="pinMsg" class="tiny red-t" style="min-height:18px;margin-top:6px"></div>
+    <button class="btn gold" style="width:100%;margin-top:6px" id="unlockB">Unlock</button>
+    <div class="chipbar" style="justify-content:center;margin-top:12px"><button class="btn sm ghost" id="forgotB">Forgot PIN?</button></div></div>`);
+  document.getElementById('unlockB').onclick = unlock; document.getElementById('pinIn').onkeydown = e => { if (e.key === 'Enter') unlock(); };
+  document.getElementById('forgotB').onclick = () => modal(`<h2>Forgot your PIN?</h2><div class="small" style="line-height:1.55">Your numbers are encrypted with your PIN, so nobody (not even us) can open them without it. That is what keeps them private.</div>
+    <div class="tip">${ico('shield')}<div>If you have a backup file, erase and restore it. Otherwise keep trying: after 5 tries there is a short wait.</div></div>
+    <div class="acts"><button class="btn red" data-act="erase">Erase and start again</button><button class="btn gold" data-act="close">Try again</button></div>`);
+  setTimeout(() => { const i = document.getElementById('pinIn'); if (i) i.focus(); }, 50); }
+async function unlock(){ const msg = document.getElementById('pinMsg'), pin = (document.getElementById('pinIn')||{}).value || '';
+  if (Date.now() < pinWait) { msg.textContent = 'Too many tries. Wait a few seconds.'; return; }
+  if (!/^\d{4,8}$/.test(pin)) { msg.textContent = 'Your PIN is 4 to 8 numbers.'; return; }
+  msg.textContent = 'Unlocking...';
+  try { const key = await deriveKey(pin, lockInfo.salt); const raw = localStorage.getItem(KEY); const d = raw ? JSON.parse(await decryptText(raw, key)) : null; cryptoKey = key; pinTries = 0; S = d ? clean(d) : null; afterOpen(); }
+  catch(e){ pinTries++; if (pinTries >= 5) { pinWait = Date.now() + 30000; pinTries = 0; } msg.textContent = 'That PIN did not work.'; const i = document.getElementById('pinIn'); if (i) { i.value = ''; i.focus(); } } }
+function lockNow(){ if (!lockInfo.locked) return; save(true); setTimeout(lockScreen, 50); }
+let hiddenAt = 0;
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') hiddenAt = Date.now(); else { if (S && lockInfo.locked && hiddenAt && Date.now() - hiddenAt > 5*60*1000) return lockNow(); if (S && S.setupDone && !document.getElementById('mask').classList.contains('on')) render(); } });
+async function restoreEncrypted(d){
+  modal(`<h2>This backup is locked</h2><div class="small muted">Type the PIN that was used when this backup was made.</div><input class="inp" id="rpin" type="password" inputmode="numeric" maxlength="8" style="margin-top:12px"><div id="rmsg" class="tiny red-t" style="min-height:18px;margin-top:6px"></div>
+    <div class="acts"><button class="btn ghost" data-act="close">Cancel</button><button class="btn gold" id="rgo">Restore</button></div>`);
+  document.getElementById('rgo').onclick = async () => { try { const pin = val('rpin'); const key = await deriveKey(pin, d.salt); const data = clean(JSON.parse(await decryptText(d, key)));
+    lockInfo = {locked:true, salt:d.salt}; saveLock(); cryptoKey = key; S = data; S.setupDone = true; S.appWelcomed = true; S.quietWins = true; save(); close(); view = 'home'; render(); toast('Backup restored. It keeps the same PIN.'); }
+    catch(e){ document.getElementById('rmsg').textContent = 'That PIN did not open this backup.'; } }; }
+
+/* ---------- install ---------- */
+let deferredPrompt = null;
+const isStandalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const inAppBrowser = () => /FBAN|FBAV|Instagram|Etsy|Line\/|Pinterest|TikTok/i.test(navigator.userAgent);
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (S && S.setupDone) render(); });
+window.addEventListener('appinstalled', () => { deferredPrompt = null; if (S) { S.installed = true; save(); render(); } toast('Installed. Look for the ' + APPNAME + ' icon on your home screen or desktop.'); });
+const CLEAN_SHOT = new URLSearchParams(location.search).has('clean');
+function canOfferInstall(){ if (CLEAN_SHOT && S && S.example) return false; return !isStandalone() && !(S && S.installed && !deferredPrompt); }
+function installCard(){ if (!canOfferInstall() || (S.installHide && diff(TODAY(), S.installHide) < 14)) return '';
+  return `<div class="install"><img src="icon-192.png" alt=""><div class="grow"><b>Put ${APPNAME} on your ${isIOS()||/android/i.test(navigator.userAgent)?'home screen':'desktop'}</b><div class="tiny muted" style="margin-top:3px">${isIOS() ? 'Install first, then add your numbers: on iPhone the installed app keeps its own storage.' : 'Opens like a real app, works offline and keeps your numbers safer.'}</div></div><button class="btn gold" data-act="install">Install</button><button class="btn sm ghost" data-act="installLater">Later</button></div>`; }
+function welcomeApp(){ if (!S || !isStandalone() || S.appWelcomed) return;
+  modal(`<div style="display:flex;gap:14px;align-items:center"><img src="icon-192.png" alt="" style="width:60px;height:60px;border-radius:15px"><div><h2 style="margin:0">Welcome to your app</h2><div class="tiny muted">${APPNAME} is installed on this device.</div></div></div>
+    <label class="lbl">What should we call you?</label><input class="inp" id="wa_name" maxlength="40" value="${S.example ? '' : esc(S.name||'')}" placeholder="Your first name">
+    <div class="acts">${S.example ? '<button class="btn" data-act="startFresh">Start my own</button>' : ''}<button class="btn gold" data-act="waSave">${S.example ? 'Keep exploring' : 'Save'}</button></div>`); }
+
+/* ---------- backups ---------- */
+async function backupText(){ const data = JSON.stringify(Object.assign({}, S, {kind:'sig-savings'}), null, 1); return lockInfo.locked && cryptoKey ? encryptText(data, cryptoKey, lockInfo.salt) : data; }
+function markBackedUp(){ if (!S) return; S.lastBackup = TODAY(); save(true); }
+const FSA = typeof window.showSaveFilePicker === 'function';
+let abHandle = null, abState = 'off', abTimer = null;
+function idb(){ return new Promise((res, rej) => { const r = indexedDB.open('sig-savings', 1); r.onupgradeneeded = () => r.result.createObjectStore('kv'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); }
+async function idbGet(k){ const db = await idb(); return new Promise(res => { const q = db.transaction('kv').objectStore('kv').get(k); q.onsuccess = () => res(q.result); q.onerror = () => res(null); }); }
+async function idbSet(k, v){ try { const db = await idb(); return new Promise(res => { const t = db.transaction('kv','readwrite'); v === undefined ? t.objectStore('kv').delete(k) : t.objectStore('kv').put(v, k); t.oncomplete = () => res(true); t.onerror = () => res(false); }); } catch(e){ return false; } }
+async function abInit(){ if (!FSA) return; try { abHandle = await idbGet('ab'); if (!abHandle) { abState = 'off'; return; } const p = await abHandle.queryPermission({mode:'readwrite'}); abState = p === 'granted' ? 'on' : 'paused'; if (view === 'home' || view === 'settings') render(); } catch(e){ abState = 'off'; } }
+async function abOn(){ try { abHandle = await showSaveFilePicker({suggestedName:'savings-challenge-backup.json', types:[{description:'Savings Challenge backup', accept:{'application/json':['.json']}}]});
+    await idbSet('ab', abHandle); abState = 'on'; await abWrite(); render(); toast('Auto-backup is on. Every change is saved to that file.'); } catch(e){ if (e && e.name !== 'AbortError') toast('Auto-backup could not start here. Use Download a backup instead.'); } }
+async function abResume(){ try { const p = await abHandle.requestPermission({mode:'readwrite'}); abState = p === 'granted' ? 'on' : 'paused'; if (abState === 'on') await abWrite(); render(); } catch(e){} }
+async function abOff(){ await idbSet('ab', undefined); abHandle = null; abState = 'off'; render(); toast('Auto-backup turned off. Your file is still where you saved it.'); }
+function autoBackupSoon(){ if (abState !== 'on') return; clearTimeout(abTimer); abTimer = setTimeout(abWrite, 1500); }
+async function abWrite(){ if (!abHandle || !S) return; try { const w = await abHandle.createWritable(); await w.write(await backupText()); await w.close(); markBackedUp(); } catch(e){ abState = 'paused'; } }
+function backupCard(){ if (!S || S.example || abState === 'on') return '';
+  if (abState === 'paused') return `<div class="install">${ico('shield')}<div class="grow"><b>Auto-backup is paused</b><div class="tiny muted">Your browser asks again after a restart. One click and it carries on saving.</div></div><button class="btn gold" data-act="abResume">Turn it back on</button></div>`;
+  const has = S.deposits.length + Object.keys(S.challenges.reduce((a,c) => Object.assign(a, c.ticks), {})).length > 4, age = S.lastBackup ? diff(TODAY(), S.lastBackup) : 999;
+  if (!has || age < 7 || (S.backupSnooze && diff(TODAY(), S.backupSnooze) < 3)) return '';
+  return `<div class="install">${ico('shield')}<div class="grow"><b>Keep your savings record safe</b><div class="tiny muted">${S.lastBackup ? 'Last backup '+age+' days ago.' : 'No backup yet.'} If the app is removed or you change phones, a backup brings everything back.</div></div>
+    ${FSA ? '<button class="btn gold" data-act="abOn">Turn on auto-backup</button>' : '<button class="btn gold" data-act="shareBackup">Save a backup</button>'}<button class="btn sm ghost" data-act="backupLater">Not now</button></div>`; }
+
+/* ---------- calendar reminders ---------- */
+function makeICS(onlyId){
+  const L = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//SheetsInGold//Savings Challenge//EN','CALSCALE:GREGORIAN','X-WR-CALNAME:Savings'];
+  const d8 = s => s.replace(/-/g,''), now = new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z', clip = s => String(s).replace(/[,;\\\n]/g,' ');
+  const ev = (u, start, title, rrule) => { L.push('BEGIN:VEVENT','UID:'+u+'@sheetsingold-savings','DTSTAMP:'+now,'DTSTART;VALUE=DATE:'+d8(start),'DTEND;VALUE=DATE:'+d8(addD(start,1)),'SUMMARY:'+clip(title)); if (rrule) L.push('RRULE:'+rrule);
+    L.push('BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:'+clip(title),'TRIGGER:-PT15H','END:VALARM','END:VEVENT'); };
+  const t = TODAY();
+  S.challenges.filter(c => !onlyId || c.id === onlyId).forEach(c => { const e = everyOf(c); if (!e) return; const left = boxes(c).filter(b => !b.done && b.due >= t); if (!left.length) return;
+    const rr = e === 1 ? 'FREQ=DAILY' : e === 7 ? 'FREQ=WEEKLY' : e === 14 ? 'FREQ=WEEKLY;INTERVAL=2' : 'FREQ=MONTHLY';
+    ev(c.id, left[0].due, 'Savings: ' + c.name + (TYPES[c.type].noMoney ? ' (no-spend day)' : ''), rr + ';COUNT=' + (c.count - left[0].i)); });
+  if (!onlyId) S.funds.forEach(f => ev('f'+f.id, fundNext(f), 'Sinking fund due: ' + f.name + ' ' + S.cur + (+f.cost).toFixed(2), f.every ? 'FREQ=MONTHLY;INTERVAL=' + f.every : null));
+  L.push('END:VCALENDAR'); return L.join('\r\n');
+}
+
+/* ---------- events ---------- */
+document.addEventListener('click', e => {
+  const g = e.target.closest('[data-go]'), a = e.target.closest('[data-act]');
+  if (a && A[a.dataset.act] && (!g || g.contains(a))) { e.preventDefault(); e.stopPropagation(); A[a.dataset.act](a); return; }
+  if (g && S){ const v = g.dataset.go; if (v === 'more') return moreSheet(); view = v; close(); render(); scrollTo(0,0); }
+});
+document.getElementById('mask').addEventListener('click', e => { if (e.target.id === 'mask') close(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); if (e.key === 'Enter' && e.target.id === 'd_amt') { const b = document.querySelector('[data-act=saveDep]'); if (b) A.saveDep(b); } });
+function moreSheet(){ modal(`<h2>More</h2>${NAV.slice(3).map(n => `<button class="nav" data-go="${n[0]}" style="margin-top:4px"><span class="ic">${ico(n[2])}</span>${n[1]}</button>`).join('')}`); }
+
+/* ---------- example (for exploring and screenshots) ---------- */
+function example(){
+  const t = TODAY(), y = pd(t).getFullYear(), s = blank();
+  Object.assign(s, {name:'Sam', example:true, setupDone:true, appWelcomed:true, quietWins:true, start:addD(t,-200)});
+  const g1 = {id:'g1', name:'Holiday to Spain', target:2500, date:addM(t,9), saved0:400, monthly:180}, g2 = {id:'g2', name:'Emergency fund', target:6000, date:addM(t,24), saved0:1200, monthly:150}, g3 = {id:'g3', name:'New laptop', target:1200, date:addM(t,3), saved0:300, monthly:120};
+  s.goals = [g1, g2, g3];
+  // 52-week challenge that started on the first Monday of the year, with a couple of missed weeks
+  let st = ds(new Date(y, 0, 1, 12)); while (pd(st).getDay() !== 1) st = addD(st, 1); if (st > addD(t,-40)) st = addD(weekStart(t), -7*30);
+  const w = {id:'c1', type:'w52', name:'52-Week Challenge', base:1, count:52, style:'up', every:7, start:st, ticks:{}, goalId:'g1', moved:0};
+  boxes(w).forEach(b => { if (b.due < weekStart(t) && ![9, 17].includes(b.i)) w.ticks[b.i] = addD(b.due, b.i % 3); });
+  w.moved = Math.max(0, stats(w).saved - 45);
+  const e = {id:'c2', type:'env', name:'100 Envelope Challenge', base:1, count:100, style:'up', every:0, start:addD(t,-170), ticks:{}, goalId:'g2', moved:0};
+  [2,4,6,9,17,20,21,25,26,30,31,34,35,37,39,47,48,50,51,52,55,61,67,70,71,74,75,76,78,80,81,83,85,86,88,89,90,91,94,95,98].forEach((n,k) => e.ticks[n-1] = addD(t, -168 + k*4));
+  e.moved = stats(e).saved;
+  const ns = {id:'c3', type:'nospend', name:'No-Spend Month', base:0, count:30, style:'same', every:1, start:addD(t,-17), ticks:{}, goalId:'', moved:0};
+  for (let i = 0; i < 17; i++) if (![4, 11].includes(i)) ns.ticks[i] = addD(ns.start, i);
+  s.challenges = [w, e, ns];
+  s.funds = [{id:'f1', name:'Car insurance', cost:720, due:addM(t,4), every:12, saved0:480}, {id:'f2', name:'Christmas gifts', cost:600, due:ds(new Date(y, 11, 20, 12)) < t ? ds(new Date(y+1, 11, 20, 12)) : ds(new Date(y, 11, 20, 12)), every:12, saved0:330},
+             {id:'f3', name:'Car service', cost:350, due:addM(t,2), every:6, saved0:120}, {id:'f4', name:'Yearly subscriptions', cost:180, due:addM(t,1), every:12, saved0:180}];
+  const dep = []; for (let k = 11; k >= 0; k--) { const d = addM(t, -k); const dd = d.slice(0,8) + '05' > t ? t : d.slice(0,8) + '05';
+    dep.push({id:'d'+k+'a', date:dd, amount:120 + (k*37)%90, to:'g:g3', note:'Payday transfer', ts:k}); if (k <= 5) dep.push({id:'d'+k+'b', date:dd, amount:25 + (k*7)%15, to:'f:f'+(1+k%3), note:'Payday transfer', ts:k}); }
+  dep.push({id:'dx', date:addD(t,-9), amount:75, to:'g:g1', note:'Birthday money', ts:99});
+  s.deposits = dep.filter(x => x.date <= t);
+  s.emergency = {costs:[{id:'e1', n:'Rent', v:1150}, {id:'e2', n:'Food', v:400}, {id:'e3', n:'Utilities', v:180}, {id:'e4', n:'Transport', v:150}, {id:'e5', n:'Phone and internet', v:60}], months:3, goalId:'g2'};
+  s.wins = [{t:'You passed ' + s.cur + '1,000 saved', d:addD(t,-80)}, {t:'You passed ' + s.cur + '2,000 saved', d:addD(t,-41)}, {t:'You passed ' + s.cur + '3,000 saved', d:addD(t,-12)}];
+  return clean(s);
+}
+
+/* ---------- onboarding ---------- */
+let OB = {};
+function onboard(step = 0){
+  if (!S) { S = blank(); }
+  view = 'home'; document.documentElement.dataset.theme = themeNow();
+  const dots = n => `<div class="steps">${[0,1,2].map(i => `<i class="${i<=n?'on':''}"></i>`).join('')}</div>`;
+  if (step === 0) return shell(`<div class="card ob"><img src="icon-192.png" alt="" style="width:72px;height:72px;border-radius:18px"><h2 class="serif">Welcome to ${APPNAME}</h2>
+    <div class="small muted" style="line-height:1.55">Fun savings challenges, goals and sinking funds in one calm place. Your numbers stay on this device.</div>${dots(0)}
+    <label class="lbl">Your first name</label><input class="inp" id="ob_name" maxlength="40" value="${esc(S.name||'')}" placeholder="Sam">
+    <label class="lbl">Currency</label><select class="inp" id="ob_cur">${CURS.map(c => `<option ${c===S.cur?'selected':''}>${c}</option>`).join('')}</select>
+    <div class="acts" style="justify-content:space-between"><button class="btn ghost" data-act="obExample">Explore with example numbers</button><button class="btn gold" data-act="obNext" data-s="0">Next</button></div>
+    <div class="tiny muted" style="margin-top:14px">Reinstalled or new phone? <button class="link" data-act="obRestore">Restore my backup</button></div>
+    <input type="file" id="restoreFile" accept=".json,application/json" hidden></div>`);
+  if (step === 1) return shell(`<div class="card ob"><h2 class="serif">What are you saving for?</h2><div class="small muted">Optional. A clear reason is the best motivation. You can add more later.</div>${dots(1)}
+    <label class="lbl">Goal</label><input class="inp" id="ob_g" maxlength="60" placeholder="Holiday, emergency fund, new car">
+    <div class="inl"><div><label class="lbl">Target</label><input class="inp" id="ob_t" inputmode="decimal" placeholder="1000"></div><div><label class="lbl">By when</label><input class="inp" id="ob_d" type="date"></div></div>
+    <div class="tpl">${['Emergency fund','Holiday','New car','House deposit','Christmas','Wedding'].map(n => `<button class="env" onclick="document.getElementById('ob_g').value='${n}'">${n}</button>`).join('')}</div>
+    <div class="acts" style="justify-content:space-between"><button class="btn ghost" data-act="obSkip" data-s="1">Skip</button><button class="btn gold" data-act="obNext" data-s="1">Next</button></div></div>`);
+  if (step === 2) { shell(`<div class="card ob"><h2 class="serif">Pick your first challenge</h2><div class="small muted">How much could you put aside in a normal week without it hurting? We size a challenge to fit.</div>${dots(2)}
+    <label class="lbl">Each week, about</label><input class="inp" id="pf_w" inputmode="decimal" value="20" oninput="pfRun()"><div id="pf_out"></div>
+    <div class="acts" style="justify-content:space-between"><button class="btn ghost" data-act="obSkip" data-s="2">Skip for now</button></div></div>`); pfRun(); }
+}
+function onboardNext(step, skip){
+  if (step === 0) { S.name = val('ob_name').slice(0,40); S.cur = CURS.includes(val('ob_cur')) ? val('ob_cur') : '$'; return onboard(1); }
+  if (step === 1) { if (!skip && val('ob_g')) { const g = {id:uid(), name:val('ob_g'), target:Math.max(0,num('ob_t')), date:val('ob_d'), saved0:0, monthly:0}; S.goals.push(g); OB.goal = g.id; } return onboard(2); }
+  if (step === 2) finishOnboard();
+}
+function finishOnboard(){ S.setupDone = true; S.appWelcomed = S.appWelcomed || isStandalone(); save(); afterOpen(); if (!S.toured) setTimeout(() => tour(0), 500); }
+/* a challenge started from onboarding finishes setup */
+const _saveCh = A.saveCh; A.saveCh = el => { const wasSetup = S.setupDone; if (!wasSetup) { S.setupDone = true; }
+  _saveCh(el); if (!wasSetup) { const c = S.challenges[S.challenges.length-1]; if (c && OB.goal && !TYPES[c.type].noMoney && !c.goalId) c.goalId = OB.goal; save(); render(); if (!S.toured) setTimeout(() => tour(0), 500); } };
+const _tick = A.tick; A.tick = el => { _tick(el); if (document.querySelector('#modal [data-act=catchAll]')) A.catchList({dataset:{id:document.querySelector('#modal [data-act=catchAll]').dataset.id}}); };
+function afterOpen(){ if (!S || !S.setupDone) return onboard(0); view = bootView || 'home'; bootView = null; S.lastOpen = TODAY(); save(true); render(); abInit(); welcomeApp(); }
+
+/* ---------- guided tour ---------- */
+const TOUR = [
+  ['.hero', 'Everything you have saved', 'Challenges, goals and sinking funds, added up in one number.'],
+  ['.hero [data-act=addSaving]', 'Add a saving', 'Put money toward a goal or a sinking fund. Took some out? You can record that too.'],
+  ['.weeks', 'No streaks to break', 'Each gold week means you saved something. Missed one? Just carry on.'],
+  ['.side .nav[data-go=challenges], .bnav [data-go=challenges]', 'Your challenges', 'Tap a box each time you save. Missed boxes wait for you as "to catch up".'],
+  ['.side .nav[data-go=settings], .bnav [data-go=more]', 'Backups and more', 'Add a PIN, keep a backup, change colours and text size. Help & FAQ is here too.']];
+function tour(i){
+  document.querySelectorAll('.tour-mask,.tour-spot,.tour-tip').forEach(x => x.remove()); if (!S) return; if (i >= TOUR.length) { S.toured = true; save(true); return; }
+  if (view !== 'home') { view = 'home'; render(); }
+  const [sel, t, p] = TOUR[i]; const el = [...document.querySelectorAll(sel)].find(x => x.offsetParent !== null); if (!el) return tour(i + 1);
+  el.scrollIntoView({block:'center'}); setTimeout(() => { const r = el.getBoundingClientRect(), pad = 8;
+    const mask = document.createElement('div'); mask.className = 'tour-mask'; const spot = document.createElement('div'); spot.className = 'tour-spot';
+    Object.assign(spot.style, {left:(r.left-pad)+'px', top:(r.top-pad)+'px', width:(r.width+pad*2)+'px', height:(r.height+pad*2)+'px'});
+    const tip = document.createElement('div'); tip.className = 'tour-tip';
+    tip.innerHTML = `<div class="tiny gold-t" style="font-weight:800;letter-spacing:1px">${i+1} OF ${TOUR.length}</div><h4>${t}</h4><p>${p}</p><div class="acts"><button class="btn sm ghost" id="tSkip">Skip tour</button><button class="btn sm gold" id="tNext">${i === TOUR.length-1 ? 'Done' : 'Next'}</button></div>`;
+    document.body.append(mask, spot, tip);
+    const below = r.bottom + 14 + 190 < innerHeight; tip.style.top = (below ? r.bottom + 14 : Math.max(12, r.top - 14 - tip.offsetHeight)) + 'px';
+    tip.style.left = Math.min(innerWidth - tip.offsetWidth - 12, Math.max(12, r.left)) + 'px';
+    document.getElementById('tNext').onclick = () => tour(i + 1); document.getElementById('tSkip').onclick = () => tour(TOUR.length); mask.onclick = () => tour(i + 1);
+  }, 220);
+}
+
+/* ---------- keep the screen current ---------- */
+let lastRenderKey = '';
+setInterval(() => { if (!S || !S.setupDone || document.getElementById('mask').classList.contains('on')) return; const a = document.activeElement; if (a && /INPUT|TEXTAREA|SELECT/.test(a.tagName)) return;
+  const k = TODAY() + '|' + new Date().getHours(); if (lastRenderKey && k !== lastRenderKey) render(); lastRenderKey = k; }, 60000);
+(async () => { try { if (navigator.storage && navigator.storage.persist && !(await navigator.storage.persisted())) await navigator.storage.persist(); } catch(e){} })();
+
+/* ---------- boot ---------- */
+const QS = new URLSearchParams(location.search);
+let bootView = null;
+if (QS.get('view') && NAV.some(n => n[0] === QS.get('view'))) bootView = QS.get('view');
+if (QS.has('example') && !localStorage.getItem(KEY) && !lockInfo.locked) { S = example(); if (QS.get('theme')) S.theme = QS.get('theme'); save(true); }   // never overwrites a real record
+if (lockInfo.locked && isEncrypted(localStorage.getItem(KEY) || '')) lockScreen();
+else { if (lockInfo.locked) { lockInfo = {locked:false}; saveLock(); } if (!S) S = load(); if (!S || !S.setupDone) onboard(0); else { afterOpen(); if (QS.get('go') === 'add') A.addSaving(); } }
+/* screenshot helper: only on example data, never touches a real record */
+if (S && S.example && QS.get('show')) setTimeout(() => { const w = QS.get('show');
+  if (w === 'ch') { selCh = QS.get('id') || 'c1'; view = 'ch'; render(); }
+  if (w === 'draw') A.draw({dataset:{id:'c2'}});
+  if (w === 'pick') { A.pickForMe(); document.getElementById('pf_w').value = QS.get('w') || '20'; pfRun(); }
+  if (w === 'catch') A.catchList({dataset:{id:''}});
+  if (w === 'add') A.addSaving({dataset:{to:'g:g1'}});
+  if (w === 'lib') A.newChallenge({dataset:{}});
+  if (w === 'new') { A.newChallenge({dataset:{type:QS.get('type')||'w52'}}); }
+  if (w === 'install') A.installHelp();
+  if (w === 'pin') A.pinModal();
+  if (w === 'tour') tour(+QS.get('step') || 0);
+}, 400);
+if ('serviceWorker' in navigator && location.protocol.startsWith('http') && !QS.has('show')) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+</script>
+</body>
+</html>
